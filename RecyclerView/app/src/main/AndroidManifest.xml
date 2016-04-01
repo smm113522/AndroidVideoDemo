@@ -18,6 +18,10 @@
         </activity>
         <activity android:name=".RecyclerViewActivity"></activity>
         <activity android:name=".TabLayoutActivity"></activity>
+        <activity android:name=".AboutActivity"></activity>
+        <activity android:name=".TextInputLayoutActivity"></activity>
+        <activity android:name=".FloatingActionButtonActivity"></activity>
+        <activity android:name=".NavigationViewActivity"></activity>
     </application>
 
 </manifest>

@@ -1,25 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/tablayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="tablayout的使用"/>
+    <LinearLayout
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <Button
+            android:id="@+id/tablayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="tablayout的使用"/>
 
-    <Button
-        android:id="@+id/recyclerview"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="recyclerview的使用"/>
-    <Button
-        android:id="@+id/textInputlayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="TextInputLayout的使用"/>
+        <Button
+            android:id="@+id/recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="recyclerview的使用"/>
+
+        <Button
+            android:id="@+id/textInputlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TextInputLayout的使用"/>
+
+        <Button
+            android:id="@+id/floatingaction"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="FloatingActionButtonde的使用"/>
+
+        <Button
+            android:id="@+id/navigationview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="NavigationView的使用"/>
+
+        <Button
+            android:id="@+id/coordinatorlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="CoordinatorLayout控件的使用"/>
+
+        <Button
+            android:id="@+id/AppBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="AppBarLayout控件的使用"/>
+
+        <Button
+            android:id="@+id/collapsingtoolbarlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="CollapsingToolbarLayout控件的使用"/>
 
 
+    </LinearLayout>
 
-</LinearLayout>
+</ScrollView>

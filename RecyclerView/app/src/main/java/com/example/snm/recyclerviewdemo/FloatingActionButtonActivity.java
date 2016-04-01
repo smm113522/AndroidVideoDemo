@@ -6,11 +6,11 @@ import android.os.Bundle;
 /**
  * Created by snm on 2016/4/1.
  */
-public class AboutActivity extends Activity {
+public class FloatingActionButtonActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_about);
+        setContentView(R.layout.activity_floatingactionbutton);
     }
 }
