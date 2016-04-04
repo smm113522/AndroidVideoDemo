@@ -1,24 +1,25 @@
 <resources>
 
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!--ActionBar的颜色-->
-        <item name="colorPrimary">#E9E7E9</item>
+
+    <!--ActionBar的颜色-->
+        <!--<item name="colorPrimary">#E9E7E9</item>-->
         <!-- 随主题而改变的颜色（如CheckBox的颜色）-->
-        <item name="colorAccent">#EF8A8C</item>
+        <!--<item name="colorAccent">#EF8A8C</item>-->
         <!--状态栏的颜色 （使用support包时似乎无效。）-->
-        <item name="colorPrimaryDark">#EFEFEF</item>
+        <!--<item name="colorPrimaryDark">#EFEFEF</item>-->
 
         <!--ActionBar的样式-->
-        <item name="actionBarStyle">@style/AppTheme.ActionBarStyle</item>
+        <!--<item name="actionBarStyle">@style/AppTheme.ActionBarStyle</item>-->
     </style>
 
     <style name="AppTheme.ActionBarStyle" parent="Widget.AppCompat.ActionBar.Solid">
-        <item name="android:titleTextStyle">@style/AppTheme.ActionBar.TitleTextStyle</item>
+        <!--<item name="android:titleTextStyle">@style/AppTheme.ActionBar.TitleTextStyle</item>-->
     </style>
 
     <style name="AppTheme.ActionBar.TitleTextStyle" parent="@style/TextAppearance.AppCompat.Widget.ActionBar.Title">
         <!--ActionBar标题文字颜色-->
-        <item name="android:textColor">@android:color/white</item>
+        <!--<item name="android:textColor">@android:color/white</item>-->
     </style>
 
 </resources>
