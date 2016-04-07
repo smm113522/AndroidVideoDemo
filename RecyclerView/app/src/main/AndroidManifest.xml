@@ -22,6 +22,7 @@
         <activity android:name=".TextInputLayoutActivity"></activity>
         <activity android:name=".FloatingActionButtonActivity"></activity>
         <activity android:name=".NavigationViewActivity"></activity>
+        <activity android:name=".CoordinatorLayoutActivity" android:theme="@style/coordinatiorlayout"></activity>
     </application>
 
 </manifest>

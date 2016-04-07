@@ -3,19 +3,23 @@ package com.example.snm.recyclerviewdemo;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.ActionBar;
+import android.support.v7.app.ActionBarActivity;
 import android.view.View;
 import android.widget.Button;
 
 /**
  * Created by snm on 2016/4/1.
  */
-public class MainActivity extends Activity implements View.OnClickListener{
+public class MainActivity extends ActionBarActivity implements View.OnClickListener{
 
     Button gotab,gorecycle,textInputlayout,floatingaction,navigationview,coordinatorlayout,AppBarLayout,collapsingtoolbarlayout;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        ActionBar ab = getSupportActionBar();
+        ab.setTitle("Navigation View");
         initView();
     }
     public void initView(){
@@ -62,6 +66,7 @@ public class MainActivity extends Activity implements View.OnClickListener{
             case R.id.AppBarLayout:
                 break;
             case R.id.collapsingtoolbarlayout:
+                startActivity(new Intent(MainActivity.this,CoordinatorLayoutActivity.class));
                 break;
         }
     }
