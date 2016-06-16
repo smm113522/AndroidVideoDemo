@@ -1,0 +1,21 @@
+1. 转换为int 
+JSONObject obj = new JSONObject(response);
+if (obj.getInt("code") == 200) {
+
+2.gson 转换为list 或者map
+
+3. if (obj.getBoolean("hasmore")) {
+同一
+
+4
+  customJson = new JSONObject(customContentString);
+                String myvalue = null;
+                if (!customJson.isNull("mykey")) {}
+判断是否为空
+5list 的生产
+ ArrayList<GoodsInfo> list = JsonUtil.toBean(response, "datas", "goods_list", new TypeToken<ArrayList<GoodsInfo>>() {
+                        }.getType());
+
+6. 实体类的生产
+ OrderGroupList OrderGroupList = JsonUtil.getBean(json,"order_group_list",new TypeToken<OrderGroupList>() {
+                        }.getType());

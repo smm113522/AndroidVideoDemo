@@ -1,0 +1,242 @@
+
+
+ButterKnifey 的懒人控件
+
+Android Butterknife Zelezny 和android stadio 的使用
+
+
+http://www.tuicool.com/articles/Q3mmay/
+
+
+目前为止
+class ExampleActivity extends Activity {
+  @Bind(R.id.title) TextView title;
+  @Bind(R.id.subtitle) TextView subtitle;
+  @Bind(R.id.footer) TextView footer;
+的用法
+
+
+官网的地址
+http://jakewharton.github.io/butterknife/index.html
+
+http://jakewharton.github.io/butterknife/ide-eclipse.html
+
+android studio 和eclipse 中都可以使用...
+
+
+------------------------------
+react native android 
+开发 的环境搭建里面
+
+
+http://www.cnblogs.com/meteoric_cry/p/4874517.html
+
+
+教程 google 里面的
+
+极客学院 翻译出来了
+
+开源中国里面有介绍
+
+gitub 中有案例 能进行学习,,只为节约人力输出
+
+维持起来方便
+
+
+
+
+
+Android项目重构之路:架构篇
+Android项目重构之路:界面篇
+Android项目重构之路:实现篇
+http://keeganlee.me/post/android/20150629
+
+
+----------- android 添加lib
+除了添加lib 外.还添加lib项目
+http://jingyan.baidu.com/article/1974b2898917aff4b1f77415.html
+步骤1,file中添加
+在下拉菜单中依次找到New— —Import Module，点击打开项目导入窗口。注意导入的是Module而不是Project，如果是Project的话AndroidStudio会自动打开一个新的窗口编辑，那样的话就是不Library了。
+
+中使用android 2.0 的版本
+
+在打开的窗口中点击右侧的"..."浏览窗口，在文件夹窗口中找到你要导入的Library项目的位置，选择后点击底部的OK按钮导入。
+
+
+
+窗口左侧选择原始的项目后，点击右侧的Dependencies（依赖项）。可以看到项目当前引用的jar包等信息。
+
+添加到build.gridle
+
+中,添加和删除在一个地方
+
+最主要的是吧build.gridle中的文件添加和删除.....
+
+
+
+----------------------------------------------
+bug 的修改.....
+ 出现No layout manager attached; skipping layout错误
+
+是没有设置LayoutManager
+
+	
+mRecyclerView.setLayoutManager(new LinearLayoutManager(this));//这里用线性显示 类似于listview
+//        mRecyclerView.setLayoutManager(new GridLayoutManager(this, 2));
+//这里用线性宫格显示 类似于grid view流
+     mRecyclerView.setLayoutManager(new StaggeredGridLayoutManager(2, OrientationHelper.VERTICAL));//这里用线性宫格显示 类似于瀑布流
+
+
+-----------------------------------
+material design 的android开源代码整理
+http://www.cnblogs.com/androidsuperman/p/4209706.html
+好看的界面
+
+
+
+EventBus  
+
+
+http://www.androidchina.net/2429.html
+
+使用基础
+
+------------------------------------------------------
+listview 套listview
+
+案例http://blog.csdn.net/hzcfy/article/details/37998163
+
+实践,注意一下问题.
+1.第一个listiview 可以是下啦刷新
+2,第二个必须进行不能滑动设置,自定义listview 或者gridview都是可以的
+message 方法中添加
+int expandSpec = MeasureSpec.makeMeasureSpec(Integer.MAX_VALUE >> 2, MeasureSpec.AT_MOST);
+		super.onMeasure(widthMeasureSpec, expandSpec);
+3,在第一个listview 中添加 第二适配器的 new 和set .数据从activity传入或者再去获取也可以.
+
+----------------------------------------------------------------
+
+http://www.apkbus.com/design/buttons.html
+
+design 基础学习
+
+中文版本
+
+------------------------------------------------------------------------------------
+ android:scaleType="fitXY"
+
+imgview 设置全铺的状态
+-----------------------------------------
+
+-------------
+
+圆角设置
+shape的使用
+
+------------------------
+
+listview 或者lineayout的回到头部
+
+setSelectionFromTop 
+
+有时候要实现ListView 回到顶部的功能
+
+在adapter.notifyDataSetChanged();之后调用ListView.setSelection(0);就可以
+
+如果是ScrollView，那么使用scrollView.scrollTo(0, 0);可以达到效果
+
+-----------------------------------------------------------------
+
+滑动的高度的判断
+http://www.jcodecraeer.com/a/anzhuokaifa/androidkaifa/2014/0924/1711.html
+
+
+ public void onScroll(AbsListView absListView, int i, int i2, int i3) {
+                int top = absListView.getTop();
+                int scrollheight =  -top + i * absListView.getHeight() ;
+                if(scrollheight >= rl_main_list.getBottom()){
+                    top_btn.setVisibility(View.VISIBLE);
+                }else{
+                    top_btn.setVisibility(View.GONE);
+                }
+            }
+
+public int getScrollY() {
+    View c = mListView.getChildAt(0);
+    if (c == null) {
+        return 0;
+    }
+    int firstVisiblePosition = mListView.getFirstVisiblePosition();
+    int top = c.getTop();
+    return -top + firstVisiblePosition * c.getHeight() ;
+}
+
+---------------------------------------------------------------------
+
+
+popwindow 点击pop、
+以外的的地方消失
+  popupWindow.setTouchable(true);
+        popupWindow.setOutsideTouchable(true);
+        popupWindow.setBackgroundDrawable(new BitmapDrawable(context.getResources(), (Bitmap) null));
+        popupWindow.update();
+----------------
+
+学习好地方
+http://androidcat.com/version2/
+
+---------------------------------------------------------------------------触犯
+window 在oncreate 中启动触发
+
+flMain该activity的主的main的控件
+
+ flMain.post(new Runnable() {
+            @Override
+            public void run() {
+                if( null != pop ){
+                    fcode_ed_text.setFocusable(true);
+                    fcode_ed_text.setFocusableInTouchMode(true);
+                    fcode_ed_text.requestFocus();
+                    pop.showAtLocation(flMain, Gravity.CENTER, 0, 0);
+                }
+            }
+        });
+
+----------------------------------------------------------------------------------
+activity状态的保存和保持(onRetainNonConfigurationInstance和getLastNonConfigurationInstanc
+
+
+
+ if (getLastNonConfigurationInstance() instanceof ActivityState) {
+            mState = (ActivityState) getLastNonConfigurationInstance();
+        }
+
+-----------------------------------------------------------------------------------
+log 第三方的使用
+    compile 'com.apkfuns.logutils:library:1.2.2'
+这个 需要配置参数
+  LogUtils.getLogConfig ( )
+                        .configAllowLog ( true )
+                        .configTagPrefix ( "LogUtils" )
+                        .configShowBorders ( true )
+                        .configLevel ( LogLevel.TYPE_VERBOSE );
+
+compile 'com.orhanobut:logger:1.11'
+无需配置
+直接用
+--------------------------------------------------------------------------
+context.getResources().getString(R.string.home)
+=========================================================
+
+
+
+
+
+
+
+
+
+
+
+
+

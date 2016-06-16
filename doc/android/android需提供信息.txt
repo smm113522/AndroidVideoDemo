@@ -1,0 +1,27 @@
+1、按照范例图片提供图片资源
+2、商城接口地址： 
+例：http://www.shopnctest.com/mobile/
+
+
+3、商城WAP地址：
+例：http://www.shopnctest.com/wap/
+
+
+4、版权信息
+：
+例：Copyright 2015 ShopNC Inc.,All rights reserved.
+
+
+5、版本信息
+：
+例：ShopNC Android v1.0
+
+6、微信APPID
+：
+   微信的appSecret：
+7、新浪微博APPID
+：
+   新浪的appSecret
+8、QQ同步登陆APPID：
+   QQ的appKey
+9、友盟key: (到友盟申请账号并建立应用，提供应用key。http://www.umeng.com/)
