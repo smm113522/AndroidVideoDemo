@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- action bar title 字体样式 -->
+    <style name="ActionBar_title_style">
+        <item name="android:textSize">20.0sp</item>
+        <item name="android:textColor">#fff</item>
+    </style>
+    
+</resources>

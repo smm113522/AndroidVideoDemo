@@ -1,0 +1,101 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="#F3F3F3"
+    android:layout_height="match_parent" >
+    
+ <RelativeLayout
+        android:id="@+id/layhead"
+       android:layout_width="match_parent"
+       android:layout_height="45dp"
+       android:background="#bc1d1b" >
+         <ImageView
+            android:id="@+id/imgback"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/imgback" />
+
+        <TextView
+           style="@style/ActionBar_title_style"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_centerInParent="true"
+           android:text="选择城市"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/search_lay"
+	    android:layout_width="match_parent"
+	    android:layout_height="60dip"
+        android:layout_below="@+id/layhead"
+	    android:padding="10dip" >
+
+	    <EditText
+	        android:id="@+id/sh"
+	        android:layout_width="fill_parent"
+	        android:layout_height="fill_parent"
+	        android:background="@drawable/searchedit"
+	        android:drawableLeft="@drawable/ic_search"
+	        android:drawablePadding="10dp"
+	        android:padding="10dip"
+	        android:hint="请输入城市名称"
+	        android:textColor="#515151"
+	        android:textSize="13dp" >
+	    </EditText>
+	
+	</RelativeLayout>
+    <RelativeLayout 
+        android:id="@+id/gps_city_lay"
+        android:layout_below="@+id/search_lay"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+    <TextView
+        android:id="@+id/alpha"
+        android:layout_width="fill_parent"
+        android:layout_height="25dip"
+        android:background="#B7B7B7"
+        android:paddingBottom="2dip"
+        android:paddingLeft="13dip"
+        android:paddingTop="2dip"
+        android:textColor="#515151"
+        android:textSize="14sp"
+        android:visibility="gone" />
+    <LinearLayout
+        android:id="@+id/lng_city_lay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/alpha"
+        android:background="@drawable/wireframe"
+        android:padding="10dip" >
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dip"
+            android:background="@drawable/ic_citylist_gps" />
+        <TextView
+            android:id="@+id/lng_city"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dip"
+            android:text="正在定位所在城市.."
+            android:textColor="#515151" />
+    </LinearLayout>
+</RelativeLayout>
+    <ListView
+        android:id="@+id/list_view"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/gps_city_lay"
+        android:cacheColorHint="#00000000"
+        android:scrollbars="none" />
+
+    <com.winxiang.locationselect.MyLetterListView
+        android:id="@+id/MyLetterListView01"
+        android:layout_width="30dip"
+        android:layout_height="fill_parent"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/gps_city_lay" />
+</RelativeLayout>
