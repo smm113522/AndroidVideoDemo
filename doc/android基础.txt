@@ -227,10 +227,20 @@ compile 'com.orhanobut:logger:1.11'
 --------------------------------------------------------------------------
 context.getResources().getString(R.string.home)
 =========================================================
+android studio 重构方法
+http://www.open-open.com/lib/view/open1454166356120.html
+好的方法
+ctrl+alt+m 为了找抽出方法而想到的。
+----------------------------------------------------------------
 
+Android获取图片大小以及获取指定大小的缩略图 
+  picscan.setDrawingCacheEnabled(true);
+                    Bitmap bitmap = picscan.getDrawingCache();
+                    picscan.setDrawingCacheEnabled(false);
 
-
-
+                    int width = bitmap.getWidth();
+                    int height = bitmap.getHeight();
+-------------------------------------------------------------------------------
 
 
 
