@@ -1,0 +1,33 @@
+新
+retrofig 的实践
+http://square.github.io/retrofit/
+
+retrofig + okhttp
+
+http://www.open-open.com/lib/view/open1453552147323.html
+基础 的方法的使用
+和get 和post 方法需要上传的东西
+和参数比对。
+Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl("url")
+                .build();
+        APIService apiService = retrofit.create(APIService.class);
+
+        Call<ResponseBody> call = apiService.getIpInfo("","getcitylist");
+
+        call.enqueue(new Callback<ResponseBody>() {
+            @Override
+            public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
+                try {
+                    Toast.makeText(getApplicationContext(),response.body().string(),Toast.LENGTH_SHORT).show();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+
+            }
+
+            @Override
+            public void onFailure(Call<ResponseBody> call, Throwable t) {
+
+            }
+        });
