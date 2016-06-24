@@ -31,3 +31,39 @@ Retrofit retrofit = new Retrofit.Builder()
 
             }
         });
+http://blog.csdn.net/xie666/article/details/50492912
+
+Retrofit 2默认情况下不集成Gson和Okhttp，在1X之前，我们完全不用考虑转换器的集成问题和请求采用什么，现在的变化需要你导入你需要的转换器开源库和OkHttp，
+
+在引入的时候加入Retrofit的依赖（Okhttp 2.5以上）
+
+compile 'com.squareup.retrofit:retrofit:2.0.0-beta2'
+compile 'com.square.okhttp:okhttp:2.5.0'
+
+     
+
+转换器
+
+comile 'com.squareup.retrofit:converter-gson:2.0.0-beta2'
+ 
+
+如果项目有用到RXJava 2X也是不引入的,这里我测试过引入
+
+compile 'com.squareup.retrofit:adapter-rxjava:2.0.0-beta2'
+compile 'io.reativex:rxandroid:1.0.1'
+
+注意没有没有默认的转换器
+
+在之前的1的版本中默认有Gson做为json的转换器，在2的版本中没有默认的转换器，你需要自己定义转换器，如果你想使用Gson，就必须要在gradle添加Gson的依赖项：
+
+可用的转换器
+
+GSON: com.squareup.retrofit:converter-gson:2.0.0-beta2
+Moshi: com.squareup.retrofit:converter-moshi:2.0.0-beta2
+Jackson: com.squareup.retrofit:converter-jackson:2.0.0-beta2
+SimpleXML: com.squareup.retrofit:converter-simplexml:2.0.0-beta2
+ProtoBuf: com.squareup.retrofit:converter-protobuf:2.0.0-beta2
+Wire: com.squareup.retrofit:converter-wire:2.0.0-beta2
+
+
+
