@@ -66,4 +66,12 @@ ProtoBuf: com.squareup.retrofit:converter-protobuf:2.0.0-beta2
 Wire: com.squareup.retrofit:converter-wire:2.0.0-beta2
 
 
+高级使用
+http://www.jcodecraeer.com/a/anzhuokaifa/androidkaifa/2016/0115/3873.html
+
+离线缓存
+浅谈 RxAndroid + Retrofit + Databinding
+http://www.jcodecraeer.com/a/anzhuokaifa/androidkaifa/2016/0131/3930.html
+
+
 
