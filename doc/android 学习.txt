@@ -1,6 +1,0 @@
-
- ButterKnife框架使用详解 
-教程 。 绑定多个view 
-和控件的使用。
-http://blog.csdn.net/u012468376/article/details/50594531#t10
-
