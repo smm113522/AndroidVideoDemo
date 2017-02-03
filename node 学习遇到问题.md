@@ -69,7 +69,7 @@
 node 好的入门博客
 1.http://www.cnblogs.com/Leo_wl/p/4361289.html
 node 必学的技术
-1.Jade 是一个高性能的模板引擎，它深受 Haml 影响，它是用 JavaScript 实现的，并且可以供 Node 使用。
+1.Jade 是一个高性能的模板引擎，它深受 Html 影响，它是用 JavaScript 实现的，并且可以供 Node 使用。
 https://segmentfault.com/a/1190000000357534
 2. html2jade
 http://html2jade.vida.io/
