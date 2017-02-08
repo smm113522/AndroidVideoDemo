@@ -11,6 +11,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.demo.mvp.presenter.LoginPresenter;
+import com.demo.mvp.view.BadgeView;
 import com.demo.mvp.view.LoginView;
 
 import butterknife.BindView;
@@ -39,6 +40,10 @@ public class MainActivity extends AppCompatActivity implements LoginView{
         ButterKnife.bind(this);
 
         loginPresenter = new LoginPresenter(this);
+
+        BadgeView badgeView = new BadgeView(this);
+        badgeView.setTargetView(button);
+        badgeView.setBadgeCount(1701);
     }
 
     @OnClick({R.id.button2, R.id.button})
