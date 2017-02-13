@@ -24,6 +24,7 @@
 2.https://github.com/alsotang/node-lessons
 3.http://nodejs.cn/
 4.http://www.cnblogs.com/Leo_wl/p/4361289.html
+5.https://segmentfault.com/a/1190000000348772
 
 ## one project
 
@@ -76,6 +77,7 @@
 ## WebStorm 中开发项目
 
 
+
  
 
 ##node 必学的技术 
@@ -86,6 +88,8 @@ http://html2jade.vida.io/
 http://www.html2jade.org/
 
 ## node 开发后台
+基于Nodejs+express4+Mongodb+Angularjs建立web项目
+
 
 ## node第三方
 1，superagent	(http://visionmedia.github.io/superagent/ ) 是个 http 方面的库，可以发起 get 或 post 请求。
