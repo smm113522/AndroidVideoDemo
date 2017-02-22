@@ -107,6 +107,9 @@ http://www.html2jade.org/
 
 	
 #java web 开发
+
+## 工具
+	下周三http://www.eclipse.org/downloads/
 ## 基础语法
 
 ## 基本操作
@@ -127,3 +130,27 @@ http://www.html2jade.org/
 
 ## 好的学习网站
 1.http://lib.csdn.net/base/17
+
+
+
+##  react-native android 开发
+
+## 环境搭建
+	1.jdk 
+	2.sdk
+	win 搭建 http://www.jianshu.com/p/2fdc4655ddf8
+	学习地址 http://reactnative.cn/docs/0.20/getting-started.html
+	React Native 环境搭建 请查看官网资料：
+	http://reactnative.cn/docs/0.41/getting-started.html
+	https://github.com/reactnativecn
+	// 其他启动方式
+	1.首先启动React Native Server 
+	react-native start 
+	2.重新开一个终端(cmd), 切换到项目目录安装APP 
+	cd android
+	gradlew.bat installDebug
+
+    执行gradlew.bat installDebug时，请先开启Genymotion模拟器
+	3.还可以
+	react-native run-android
+## 
