@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true" android:color="@color/login_button_bg"/>
+    <item android:state_checked="true" android:color="@color/login_button_bg"/>
+    <item android:state_selected="true" android:color="@color/login_button_bg"/>
+    <item android:state_selected="false" android:color="@color/tab_unchecked"/>
+    <item android:state_checked="false" android:color="@color/tab_unchecked"/>
+    <item android:state_focused="false" android:color="@color/tab_unchecked"/>
+    <item android:color="@color/tab_unchecked" />
+</selector>

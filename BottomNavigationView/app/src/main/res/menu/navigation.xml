@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/add"
+        android:icon="@drawable/common_btn_kehu_pr"
+        android:title="call" />
+    <item
+        android:id="@+id/delete"
+        android:icon="@drawable/common_btn_shouye_pr"
+        android:title="message" />
+    <item
+        android:id="@+id/setting"
+        android:icon="@drawable/common_btn_wode_pr"
+        android:title="setting" />
+
+    <item
+        android:id="@+id/me"
+        android:icon="@drawable/common_btn_xiangmu_pr"
+        android:title="me"/>
+</menu>
