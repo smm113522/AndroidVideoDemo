@@ -153,4 +153,6 @@ http://www.html2jade.org/
     执行gradlew.bat installDebug时，请先开启Genymotion模拟器
 	3.还可以
 	react-native run-android
-## 
+## 案例 
+	https://github.com/bigsui/shopping-react-native
+	
