@@ -3,12 +3,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/blue"
     android:orientation="vertical">
-
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="55dp"
         android:layout_alignParentBottom="true"
         android:layout_gravity="center_vertical"
         android:gravity="center">
@@ -16,21 +16,20 @@
         <RadioGroup
             android:id="@+id/rg_head"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="55dp"
             android:checkedButton="@+id/ra_company_office"
             android:orientation="horizontal">
 
             <RadioButton
                 android:id="@+id/rb_kh_all"
                 android:layout_width="match_parent"
-                android:layout_height="45dp"
+                android:layout_height="55dp"
                 android:background="@color/white"
                 android:button="@null"
                 android:checked="true"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="首页"
-                android:drawableTop="@drawable/tab1"
                 android:textColor="@drawable/tab_color_select"
                 android:textSize="14dp" />
 
@@ -38,7 +37,7 @@
             <RadioButton
                 android:id="@+id/rb_kh_bb"
                 android:layout_width="match_parent"
-                android:layout_height="45dp"
+                android:layout_height="55dp"
                 android:layout_weight="1"
                 android:background="@color/white"
                 android:button="@null"
@@ -51,7 +50,7 @@
             <RadioButton
                 android:id="@+id/rb_kh_dk"
                 android:layout_width="match_parent"
-                android:layout_height="45dp"
+                android:layout_height="55dp"
                 android:layout_weight="1"
                 android:background="@color/white"
                 android:button="@null"
@@ -63,7 +62,7 @@
             <RadioButton
                 android:id="@+id/rb_kh_rg"
                 android:layout_width="match_parent"
-                android:layout_height="45dp"
+                android:layout_height="55dp"
                 android:layout_weight="1"
                 android:background="@color/white"
                 android:button="@null"
@@ -75,7 +74,7 @@
             <RadioButton
                 android:id="@+id/rb_kh_qy"
                 android:layout_width="match_parent"
-                android:layout_height="45dp"
+                android:layout_height="55dp"
                 android:layout_weight="1"
                 android:background="@color/white"
                 android:button="@null"

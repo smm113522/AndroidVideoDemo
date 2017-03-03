@@ -37,7 +37,8 @@ public class FragmentDemoActivity extends BaseActivity implements BottomNavigati
         bottomNavigationBar
                 .setBackgroundStyle(BottomNavigationBar.BACKGROUND_STYLE_RIPPLE);
         bottomNavigationBar
-                .addItem(new BottomNavigationItem(R.drawable.common_btn_kehu_pr, "位置").setActiveColor(android.R.color.holo_orange_dark))
+                .addItem(new BottomNavigationItem(R.drawable.common_btn_kehu, "位置")
+                        .setActiveColor(android.R.color.holo_blue_light))
                 .addItem(new BottomNavigationItem(R.drawable.common_btn_shouye_pr, "发现").setActiveColor(android.R.color.holo_blue_bright))
                 .addItem(new BottomNavigationItem(R.drawable.common_btn_wode_pr, "爱好").setActiveColor(android.R.color.holo_green_dark))
                 .addItem(new BottomNavigationItem(R.drawable.common_btn_xiangmu_pr, "图书").setActiveColor(android.R.color.holo_blue_light))

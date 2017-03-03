@@ -46,7 +46,14 @@ public class NewLocationFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_location, container, false);
         unbinder = ButterKnife.bind(this, view);
         Bundle bundle = getArguments();
-        String agrs1 = bundle.getString("agrs1");
+        String agrs1 = null;
+        if(bundle != null){
+            agrs1= bundle.getString("agrs1");
+        }else {
+            agrs1 = "ddddd";
+        }
+
+
 
         tv.setText(agrs1);
 

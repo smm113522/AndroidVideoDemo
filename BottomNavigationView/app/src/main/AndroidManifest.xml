@@ -21,6 +21,7 @@
         <activity android:name=".FragmentDemoActivity"></activity>
         <activity android:name=".FragmentViewpageDemoActivity"></activity>
         <activity android:name=".FristButtonActivity"></activity>
+        <activity android:name=".osc.OsActivity"></activity>
     </application>
 
 </manifest>

@@ -205,14 +205,17 @@ public class AllBottonActivity extends BaseActivity implements View.OnClickListe
 
         if (items3.isChecked()) {
             bottomNavigationBar
-                    .addItem(new BottomNavigationItem(R.drawable.common_btn_xiangmu_pr, "Nearby").setActiveColorResource(R.color.orange).setBadgeItem(numberBadgeItem))
-                    .addItem(new BottomNavigationItem(R.drawable.common_btn_wode_pr, "Find").setActiveColorResource(R.color.teal))
+                    .addItem(new BottomNavigationItem(R.drawable.common_btn_kehu, "Nearby")
+                            .setActiveColorResource(R.color.blue)
+                            .setBadgeItem(numberBadgeItem))
+                    .addItem(new BottomNavigationItem(R.drawable.common_btn_wode_pr, "Find")
+                            .setActiveColorResource(R.color.teal))
                     .addItem(new BottomNavigationItem(R.drawable.common_btn_shouye_pr, "Categories").setActiveColorResource(R.color.blue))
                     .setFirstSelectedPosition(lastSelectedPosition > 2 ? 2 : lastSelectedPosition)
                     .initialise();
         } else if (items4.isChecked()) {
             bottomNavigationBar
-                    .addItem(new BottomNavigationItem(R.drawable.common_btn_wode_pr, "Home").setActiveColorResource(R.color.orange).setBadgeItem(numberBadgeItem))
+                    .addItem(new BottomNavigationItem(R.drawable.common_btn_kehu, "Home").setActiveColorResource(R.color.blue).setBadgeItem(numberBadgeItem))
                     .addItem(new BottomNavigationItem(R.drawable.common_btn_wode_pr, "Books").setActiveColorResource(R.color.teal))
                     .addItem(new BottomNavigationItem(R.drawable.common_btn_xiangmu_pr, "Music").setActiveColorResource(R.color.blue))
                     .addItem(new BottomNavigationItem(R.drawable.common_btn_xinxi_pr, "Movies & TV").setActiveColorResource(R.color.brown))
