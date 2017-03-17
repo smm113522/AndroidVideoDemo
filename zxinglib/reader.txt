@@ -1,0 +1,6 @@
+Bitmap qrCodeBitmap = EncodingUtils.createQRCode("http:www.baidu.com", 350, 350,null);
+//        iverweima.setImageBitmap(qrCodeBitmap);
+
+startresult  CaptureActivity 
+
+放回来结果既可以
