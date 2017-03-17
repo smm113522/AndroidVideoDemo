@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private LinearLayout masked5;
     private LinearLayout masked6;
     private LinearLayout masked7;
+    private LinearLayout masked8;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,6 +49,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         this.masked3 = (LinearLayout) findViewById(R.id.masked3);
         this.masked2 = (LinearLayout) findViewById(R.id.masked2);
         this.masked1 = (LinearLayout) findViewById(R.id.masked1);
+        this.masked8 = (LinearLayout) findViewById(R.id.masked8);
         this.masked6.setOnClickListener(this);
         this.masked5.setOnClickListener(this);
         this.masked4.setOnClickListener(this);
@@ -55,6 +57,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         this.masked2.setOnClickListener(this);
         this.masked1.setOnClickListener(this);
         this.masked7.setOnClickListener(this);
+        this.masked8.setOnClickListener(this);
     }
 
 
@@ -80,6 +83,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.masked7:
                 startActivity(new Intent(MainActivity.this, OsActivity.class));
+                break;
+            case R.id.masked8:
+                startActivity(new Intent(MainActivity.this, BottomBarActivity.class));
                 break;
         }
     }

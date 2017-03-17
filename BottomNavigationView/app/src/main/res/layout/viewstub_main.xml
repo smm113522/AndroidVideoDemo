@@ -145,5 +145,24 @@
 
             </LinearLayout>
         </com.balysv.materialripple.MaterialRippleLayout>
+        <com.balysv.materialripple.MaterialRippleLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp">
+
+            <LinearLayout
+                android:id="@+id/masked8"
+                android:layout_width="match_parent"
+                android:layout_height="45dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:gravity="center_vertical"
+                    android:text="无 viewpage" />
+
+
+            </LinearLayout>
+        </com.balysv.materialripple.MaterialRippleLayout>
     </LinearLayout>
 </ScrollView>
