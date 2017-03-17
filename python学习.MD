@@ -20,5 +20,8 @@ python Ñ§Ï°
 	1.JetBrains PyCharm Community Edition 2016.3.2(64)
 	2.pyzo
 
-	
+
+## °¸Àý
+²©¿Í
+https://github.com/anshengme/july	
 	
