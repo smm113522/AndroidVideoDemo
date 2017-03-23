@@ -198,10 +198,13 @@
 	http://www.cnblogs.com/Leo_wl/p/4459274.html
 	
 	
-	
 ## 基础语法
 	java 基本的核心思想和代码构思
 	http://www.cnblogs.com/carsonzhu/p/5472159.html
+	
+	jsp 基础语法
+	
+	er
 	
 	
 ## 基本操作
