@@ -1,0 +1,47 @@
+apply plugin: 'com.android.application'
+
+android {
+
+    signingConfigs {
+        release {
+            storeFile file("keystone.jks")//keystore的路径
+            storePassword "kesun1"
+            keyAlias "kesun1"
+            keyPassword "kesun1"
+        }
+        debug {
+        }
+    }
+
+    compileSdkVersion 25
+    buildToolsVersion "25.0.2"
+    defaultConfig {
+        applicationId "com.kesun.aiguxuanwap"
+        minSdkVersion 14
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            signingConfig signingConfigs.release
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-project.txt'
+            //signingConfig defaultConfig.config
+            pseudoLocalesEnabled false
+            zipAlignEnabled true
+        }
+        debug {
+            //    signingConfig defaultConfig.config
+            signingConfig signingConfigs.release
+            multiDexEnabled true
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile 'com.android.support:appcompat-v7:25.2.0'
+    compile project(':pugongyinglib')
+}

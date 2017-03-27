@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">爱股轩</string>
+    <string name="file_provider">com.pgyersdk.provider</string>
+</resources>
