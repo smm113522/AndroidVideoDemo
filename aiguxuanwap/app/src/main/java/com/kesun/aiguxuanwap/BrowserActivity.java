@@ -4,33 +4,29 @@ import android.Manifest;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.PixelFormat;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
-import android.support.v7.app.AppCompatActivity;
 import android.view.KeyEvent;
-import android.view.View;
-import android.webkit.WebChromeClient;
-import android.webkit.WebSettings;
-import android.webkit.WebView;
-import android.webkit.WebViewClient;
-import android.widget.RelativeLayout;
+import android.view.WindowManager;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+import com.kesun.aiguxuanwap.utils.X5WebView;
 
-    public static String url = "http://aiguxuanwap1.com.bdy15421.samyon.com/";
-    private WebView webView;
-    private android.widget.RelativeLayout activitymain;
+/**
+ * Created by Administrator on 2017/4/5.
+ */
+
+public class BrowserActivity extends BaseActivity {
+
+    X5WebView tbsContent;
     private static final int REQUEST_CODE_READ_EXTERNAL_STORAGE_PERMISSIONS = 1;
     private static final int REQUEST_CODE_WRITE_EXTERNAL_STORAGE = 2;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
         //动态请求权限
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             if (checkSelfPermission(Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
@@ -42,60 +38,24 @@ public class MainActivity extends AppCompatActivity {
                         REQUEST_CODE_WRITE_EXTERNAL_STORAGE);
             }
         }
+        setContentView(R.layout.activity_browser);
 
-        this.activitymain = (RelativeLayout) findViewById(R.id.activity_main);
-        this.webView = (WebView) findViewById(R.id.webView);
+        getWindow().setFormat(PixelFormat.TRANSLUCENT);
+        getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE | WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
+        initView();
+    }
 
-        WebSettings webSettings = webView.getSettings();
-        webSettings.setJavaScriptEnabled(true);//设置支持javascript
-//        webView.addJavascriptInterface(new JavaScriptInterface(), "xueleapp");
-        webView.setWebViewClient(new WebViewClient() {
-            public boolean shouldOverrideUrlLoading(WebView view, String url) {
-                view.loadUrl(url);
-                return true;
-            }
-        });
-        webView.setWebChromeClient(new WebChromeClient() {
-            @Override
-            public void onProgressChanged(WebView view, int newProgress) {
-                if (newProgress == 100) {
-                    //网页加载完成
-                } else {
-                    //网页加载中
-                }
-            }
-        });
+    private void initView() {
+        tbsContent = (X5WebView)findViewById(R.id.tbsContent);
+        tbsContent.loadUrl(MainActivity.url);
 
-        webSettings.setUseWideViewPort(true);
-        webSettings.setLoadWithOverviewMode(true);
-
-        webSettings.setSupportZoom(true);  //支持缩放
-        webSettings.setLayoutAlgorithm(WebSettings.LayoutAlgorithm.SINGLE_COLUMN); //支持内容重新布局
-        webSettings.supportMultipleWindows();  //多窗口
-        webSettings.setAllowFileAccess(true);  //设置可以访问文件
-        webSettings.setNeedInitialFocus(true); //当webview调用requestFocus时为webview设置节点
-        webSettings.setBuiltInZoomControls(true); //设置支持缩放
-        webSettings.setJavaScriptCanOpenWindowsAutomatically(true); //支持通过JS打开新窗口
-        webSettings.setLoadsImagesAutomatically(true);  //支持自动加载图片
-//        webView.setLayerType(View.LAYER_TYPE_SOFTWARE, null);
-
-        //settings.setUseWideViewPort(true);造成文字太小
-        webSettings.setDomStorageEnabled(true);
-        webSettings.setDatabaseEnabled(true);
-        webSettings.setAppCachePath(getCacheDir().getAbsolutePath() + "/webViewCache");
-        webSettings.setAppCacheEnabled(true);
-
-        webSettings.setCacheMode(WebSettings.LOAD_CACHE_ELSE_NETWORK);
-
-
-        webView.loadUrl(url);
     }
 
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         if (keyCode == KeyEvent.KEYCODE_BACK) {
-            if (webView.canGoBack()) {
-                webView.goBack();//返回上一浏览页面
+            if (tbsContent.canGoBack()) {
+                tbsContent.goBack();//返回上一浏览页面
                 return true;
             } else {
 //                finish();//关闭Activity
@@ -167,4 +127,6 @@ public class MainActivity extends AppCompatActivity {
             return true;
         }
     }
+
+
 }
