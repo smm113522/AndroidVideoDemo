@@ -161,62 +161,26 @@
 
 
 ## node第三方
+	0，utility   md5 加密
+	
 	1，superagent	(http://visionmedia.github.io/superagent/ ) 是个 http 方面的库，可以发起 get 或 post 请求。
 
 	2，cheerio		(https://github.com/cheeriojs/cheerio ) 大家可以理解成一个 Node.js 版的 jquery，用来从网页中以 css selector 取数据，使用方式跟 jquery 一样一样的。	
 
 	3, express 		官网是 http://expressjs.com/ ，是 Node.js 应用最广泛的 web 框架，现在是 4.x 版本，它非常薄。跟 Rails 比起来，完全两个极端。 
 
-	4，eventproxy   三个库：superagent cheerio eventproxy(https://github.com/JacksonTian/eventproxy )	
+	4，eventproxy   高并发 三个库：superagent cheerio eventproxy(https://github.com/JacksonTian/eventproxy )	
 
-
+	5，async  
+	
+	6，
 ## node 推荐书籍
 
 	《九浅一深Node.js》
 	书籍地址<https://github.com/pana/node-books>
 
 	
-#java web 开发
 
-## 工具
-	下周三 http://www.eclipse.org/downloads/
-	javaee 版本 下载
-	iede 的使用 下载最新的 安装即可，然后破解即可用
-	IntelliJ IDEA 2016.3.4(64) 搭建java web 项目中app
-	
-## 环境搭建
-	
-	java web 
-	IDEA 环境搭建（http://www.cnblogs.com/carsonzhu/p/5468223.html）	
-	eclipse 版本 http://www.cnblogs.com/hehaiyang/p/4578488.html
-	idea 安卓也用所以还是很熟悉的。
-	java maven 
-	环境http://blog.csdn.net/qq_32588349/article/details/51461182
-	 archetypeCatalog=internal 
-	java maven 构建 web 项目项目
-	http://www.micmiu.com/software/common/intellij-idea-create-maven-web/
-	
-	maven spring mvc 环境
-	http://www.cnblogs.com/Leo_wl/p/4459274.html
-	
-	
-## 基础语法
-	java 基本的核心思想和代码构思
-	http://www.cnblogs.com/carsonzhu/p/5472159.html
-	
-	jsp 基础语法
-	
-	er
-	
-	
-## 基本操作
-
-## 应用
-
-## web 框架
-	1.spring mvc
-	2.spring boot
-	
 #php web 开发
 
 ## 基础语法
@@ -254,11 +218,6 @@
 	https://github.com/bigsui/shopping-react-native
 	
 	
-	
-	
-	
-## mysql
-
 ## 前端
 
 ## 好的blog
