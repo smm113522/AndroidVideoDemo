@@ -1,0 +1,11 @@
+使用
+http://x5.tencent.com/tbs/sdk.html
+里面sdk 封装的webview
+
+能登录，并且保存用户名
+
+上传文件
+
+和视频全屏
+
+等问题

@@ -31,7 +31,7 @@ android {
         release {
             signingConfig signingConfigs.release
             minifyEnabled true
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-project.txt'
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
             //signingConfig defaultConfig.config
             pseudoLocalesEnabled false
             zipAlignEnabled true
@@ -54,6 +54,7 @@ dependencies {
     compile 'com.android.support:appcompat-v7:25.2.0'
     compile project(':pugongyinglib')
 
-    compile files('libs/tbs_sdk_thirdapp_v3.1.0.1034_43100_sharewithdownload_obfs_20170301_182143.jar')
-    compile 'com.hjhrq1991.library.tbs:tbsjsbridge:1.0.0'
+//    compile files('libs/tbs_sdk_thirdapp_v3.1.0.1034_43100_sharewithdownload_obfs_20170301_182143.jar')
+//    compile 'com.hjhrq1991.library.tbs:tbsjsbridge:1.0.0'
+//    compile 'com.hjhrq1991.library:jsbridge:1.0.6'
 }

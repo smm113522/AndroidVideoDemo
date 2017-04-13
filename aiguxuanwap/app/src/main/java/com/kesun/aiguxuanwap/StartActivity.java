@@ -50,7 +50,7 @@ public class StartActivity extends AppCompatActivity {
      * 跳转到主界面
      */
     private void turnPage() {
-        Intent intent = new Intent(StartActivity.this, TbsBridgeWebView.class);
+        Intent intent = new Intent(StartActivity.this, BrowserActivity.class);
         this.startActivity(intent);
         this.finish();
     }
