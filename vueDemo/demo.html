@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>demo</title>
+		<!-- 引入样式 -->
+		<link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-default/index.css">
+	</head>
+
+	<body>
+		<div id="app">
+			<el-button @click="visible = true">按钮</el-button>
+			<el-dialog v-model="visible" title="Hello world">
+				<p>欢迎使用 Element</p>
+			</el-dialog>
+		</div>
+		<div id="app1">
+			{{ message }}
+		</div>
+		<div id="app-2">
+			<span v-bind:title="message">
+			    鼠标悬停几秒钟查看此处动态绑定的提示信息！
+			</span>
+		</div>
+		<div id="app-3">
+			<p v-if="seen">现在你看到我了</p>
+		</div>
+		<div id="app-4">
+			<ol>
+				<li v-for="todo in todos">
+					{{ todo.text }}
+				</li>
+			</ol>
+		</div>
+		<div id="app-5">
+			<p>{{ message }}</p>
+			<button v-on:click="reverseMessage">逆转消息</button>
+		</div>
+		<div id="app-6">
+			<p>{{ message }}</p>
+			<input v-model="message">
+		</div>
+	</body>
+	<!-- 先引入 Vue -->
+	<script src="https://unpkg.com/vue/dist/vue.js"></script>
+	<!-- 引入组件库 -->
+	<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+	<script>
+		new Vue({
+			el: '#app',
+			data: function() {
+				return {
+					visible: false
+				}
+			}
+		})
+		var app = new Vue({
+			el: '#app1',
+			data: {
+				message: 'Hello Vue!'
+			}
+		})
+		var app2 = new Vue({
+			el: '#app-2',
+			data: {
+				message: '页面加载于 ' + new Date()
+			}
+		})
+		var app3 = new Vue({
+			el: '#app-3',
+			data: {
+				seen: true //看到
+				//				seen: false             //看不到
+			}
+		})
+		var app4 = new Vue({
+			el: '#app-4',
+			data: {
+				todos: [{
+						text: '学习 JavaScript'
+					},
+					{
+						text: '学习 Vue'
+					},
+					{
+						text: '整个牛项目'
+					}
+				]
+			}
+		})
+		var app5 = new Vue({
+			el: '#app-5',
+			data: {
+				message: 'Hello Vue.js!'
+			},
+			methods: {
+				reverseMessage: function() {
+					this.message = this.message.split('').reverse().join('')
+				}
+			}
+		})
+		var app6 = new Vue({
+			el: '#app-6',
+			data: {
+				message: 'Hello Vue!'
+			}
+		})
+	</script>
+
+</html>
