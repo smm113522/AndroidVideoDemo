@@ -1,27 +1,28 @@
-#node ·şÎñÆ÷
+#node æœåŠ¡å™¨
 
-## node ÊÇÊ²Ã´
+## node æ˜¯ä»€ä¹ˆ
+	https://www.ibm.com/developerworks/cn/opensource/os-nodejs/
+## node åŸºç¡€è¯­æ³•æ•™ç¨‹
+http://www.hubwiz.com/course/5359f6f6ec7452081a7873d8/
 	
-## node »ù´¡Óï·¨
-
-## node ¿ª·¢¹¤¾ß
+## node å¼€å‘å·¥å…·
 	1.JetBrains WebStorm 2016.3.2(64)
 	2.HBuilder
 
-## node »ù±¾²Ù×÷
+## node åŸºæœ¬æ“ä½œ
 
-## node Ó¦ÓÃ
-	1.ÅÀ³æ
+## node åº”ç”¨
+	1.çˆ¬è™«
 	
 	
-## node web Ó¦ÓÃ
+## node web åº”ç”¨
 	1.express 
-	   °¸Àıhttps://gold.xitu.io/entry/5884ee911b69e60058e283a0
+	   æ¡ˆä¾‹https://gold.xitu.io/entry/5884ee911b69e60058e283a0
 	   https://github.com/liumingmusic/react-native_toiletApp
-	   Æô¶¯ÆğÀ´ÁËweb¶Ë£¬app ¶ËÃ»ÓĞÆô¶¯£¬½Ó¿Ú¿ÉÒÔ×ß
+	   å¯åŠ¨èµ·æ¥äº†webç«¯ï¼Œapp ç«¯æ²¡æœ‰å¯åŠ¨ï¼Œæ¥å£å¯ä»¥èµ°
 	2.
 
-## node ºÃÍøÕ¾ ºÍ ºÃµÄÈëÃÅÍøÕ¾
+## node å¥½ç½‘ç«™ å’Œ å¥½çš„å…¥é—¨ç½‘ç«™
 	1.https://cnodejs.org/	
 	2.https://github.com/alsotang/node-lessons
 	3.http://nodejs.cn/
@@ -29,77 +30,77 @@
 	5.https://segmentfault.com/a/1190000000348772
 	6.https://cnodejs.org/getstart/
 
-## ¿ª·¢¹¤¾ß
-	Ê¹ÓÃNodeclipse¿ª·¢ExpressÏîÄ¿
+## å¼€å‘å·¥å…·
+	ä½¿ç”¨Nodeclipseå¼€å‘Expressé¡¹ç›®
 	WebStorm 2016.3.2 
 
 ## one project
 
-	Ö®ÏÂËùÓĞ²Ù×÷¶¼ÊÇÔÚÃüÁîÊµÏÖµÄ
-	1¡¢express¿ª·¢
-	1.1 npm»·¾³ÉèÖÃ
+	ä¹‹ä¸‹æ‰€æœ‰æ“ä½œéƒ½æ˜¯åœ¨å‘½ä»¤å®ç°çš„
+	1ã€expresså¼€å‘
+	1.1 npmç¯å¢ƒè®¾ç½®
 
-		1.°²×°nodeÈí¼ş£ºhttps://nodejs.org/en
-		2.°²×°ÌÔ±¦ÂË¾µ£ºnpm install -g cnpm --registry = https://registry.npm.taobao.org
-		3.ÉèÖÃÈ«¾ÖµÄnpm´Ó¹úÄÚÏÂÔØ×ÊÔ´£¬ npmrcÌí¼ÓÅäÖÃ¡£macÏÂÃæµØÖ·Îª /Users/liumingming/.npmrc£¬ĞŞ¸Ästrict-ssl=true ºÍ registry=https://registry.npm.taobao.org
+		1.å®‰è£…nodeè½¯ä»¶ï¼šhttps://nodejs.org/en
+		2.å®‰è£…æ·˜å®æ»¤é•œï¼šnpm install -g cnpm --registry = https://registry.npm.taobao.org
+		3.è®¾ç½®å…¨å±€çš„npmä»å›½å†…ä¸‹è½½èµ„æºï¼Œ npmrcæ·»åŠ é…ç½®ã€‚macä¸‹é¢åœ°å€ä¸º /Users/liumingming/.npmrcï¼Œä¿®æ”¹strict-ssl=true å’Œ registry=https://registry.npm.taobao.org
 
-	1.2 express»·¾³´î½¨
+	1.2 expressç¯å¢ƒæ­å»º
 
-		1.°²×°express-generator£ºnpm install -g express-generator£¬ÓÃ»§¿ìËÙ´´½¨expressÏîÄ¿
-		2.Éú³ÉÏîÄ¿Ä£¿é£º½øÈëµ½ÏîÄ¿Ä¿Â¼ /User/liumm/A_study/app/toiletApp ÏÂÃæ£¬Ö´ĞĞÃüÁî express -e service£¬ÆäÖĞ-eÎªejsÄ£¿é¼òĞ´
-		3.ÔÚ·şÎñ¶ËÏîÄ¿°²×°ÒÀÀµ£º½øÈë·şÎñ¶ËÏîÄ¿ /User/liumm/A_study/app/toiletApp/service Ö´ĞĞÃüÁî cnpm install£¬°²×°ÒÀÀµÀà¿â
-		4.Æô¶¯ÏîÄ¿£ºÊ¹ÓÃÔÚµ±Ç°Ä¿Â¼ÖĞÊ¹ÓÃ npm startÆô¶¯ÏîÄ¿£¬ÆäÖĞstartÃüÁîÔÚpackage.jsonÒÑ¾­ÅäÖÃ
-		5.Ô¤ÀÀ£ºÆô¶¯ÒÑ¾­¿ª·¢±¾µØµÄ localhost:3000£¬·ÃÎÊµØÖ·¼´¿É¿´¼ûÆô¶¯µÄÒ³Ãæ
-		6.ĞŞ¸ÄÔ¤ÀÀ£ºÏîÄ¿ÖĞapp.js ÎÄ¼şÎª·şÎñÆô¶¯Èë¿ÚÂ·¾¶¡£ĞŞ¸ÄÏîÄ¿ÏÂÃæ views/index.ejsÎÄ¼ş£¬ÖØÆô·şÎñ½øĞĞ²é¿´
-		7.expressĞŞ¸ÄÈÈ¼ÓÔØ£º°²×°supervisor£¬npm install supervisor -g£¬ĞŞ¸ÄÏîÄ¿×Ô¶¯¸üĞÂ
+		1.å®‰è£…express-generatorï¼šnpm install -g express-generatorï¼Œç”¨æˆ·å¿«é€Ÿåˆ›å»ºexpressé¡¹ç›®
+		2.ç”Ÿæˆé¡¹ç›®æ¨¡å—ï¼šè¿›å…¥åˆ°é¡¹ç›®ç›®å½• /User/liumm/A_study/app/toiletApp ä¸‹é¢ï¼Œæ‰§è¡Œå‘½ä»¤ express -e serviceï¼Œå…¶ä¸­-eä¸ºejsæ¨¡å—ç®€å†™
+		3.åœ¨æœåŠ¡ç«¯é¡¹ç›®å®‰è£…ä¾èµ–ï¼šè¿›å…¥æœåŠ¡ç«¯é¡¹ç›® /User/liumm/A_study/app/toiletApp/service æ‰§è¡Œå‘½ä»¤ cnpm installï¼Œå®‰è£…ä¾èµ–ç±»åº“
+		4.å¯åŠ¨é¡¹ç›®ï¼šä½¿ç”¨åœ¨å½“å‰ç›®å½•ä¸­ä½¿ç”¨ npm startå¯åŠ¨é¡¹ç›®ï¼Œå…¶ä¸­startå‘½ä»¤åœ¨package.jsonå·²ç»é…ç½®
+		5.é¢„è§ˆï¼šå¯åŠ¨å·²ç»å¼€å‘æœ¬åœ°çš„ localhost:3000ï¼Œè®¿é—®åœ°å€å³å¯çœ‹è§å¯åŠ¨çš„é¡µé¢
+		6.ä¿®æ”¹é¢„è§ˆï¼šé¡¹ç›®ä¸­app.js æ–‡ä»¶ä¸ºæœåŠ¡å¯åŠ¨å…¥å£è·¯å¾„ã€‚ä¿®æ”¹é¡¹ç›®ä¸‹é¢ views/index.ejsæ–‡ä»¶ï¼Œé‡å¯æœåŠ¡è¿›è¡ŒæŸ¥çœ‹
+		7.expressä¿®æ”¹çƒ­åŠ è½½ï¼šå®‰è£…supervisorï¼Œnpm install supervisor -gï¼Œä¿®æ”¹é¡¹ç›®è‡ªåŠ¨æ›´æ–°
 
-	¸ù¾İ»·¾³Ö®ºó»ù±¾²½Öè£ºhttp://blog.sina.com.cn/s/blog_a29eae2b0102vuey.html
+	æ ¹æ®ç¯å¢ƒä¹‹ååŸºæœ¬æ­¥éª¤ï¼šhttp://blog.sina.com.cn/s/blog_a29eae2b0102vuey.html
 
-	1.¹¤³ÌµÄ´´½¨£¬ Ä¿Â¼Îªthree
+	1.å·¥ç¨‹çš„åˆ›å»ºï¼Œ ç›®å½•ä¸ºthree
 		express three -s
 		
-	2.cd three ´ò¿ªÎÄ¼ş¼Ğ
+	2.cd three æ‰“å¼€æ–‡ä»¶å¤¹
 
-	3.express -e three ±àÒë³ÌĞò
+	3.express -e three ç¼–è¯‘ç¨‹åº
 
-	**Õâ¸ö±ØĞë½øĞĞ
-	4.npm install npm Ìí¼Ó
-	´Ó¶ø¿ÉÒÔÌí¼Ómysql µÈÆäËû¹¤¾ßÁË
+	**è¿™ä¸ªå¿…é¡»è¿›è¡Œ
+	4.npm install npm æ·»åŠ 
+	ä»è€Œå¯ä»¥æ·»åŠ mysql ç­‰å…¶ä»–å·¥å…·äº†
 
-	**Õâ¸ö±ØĞë½øĞĞ
-	5.npm init È»ºó³õÊ¼»¯£¬ 
+	**è¿™ä¸ªå¿…é¡»è¿›è¡Œ
+	5.npm init ç„¶ååˆå§‹åŒ–ï¼Œ 
 
-	6.½øĞĞÊı¾İÌí¼Ó È»ºóÌí¼Ójson ÀïµÄÊı¾İÁË yes ±ØĞëĞ´ÉÏ
+	6.è¿›è¡Œæ•°æ®æ·»åŠ  ç„¶åæ·»åŠ json é‡Œçš„æ•°æ®äº† yes å¿…é¡»å†™ä¸Š
 
-	7.npm start ¾ÍÔËĞĞÁË¡£
-	¾Í¿ÉÒÔÔËĞĞä¯ÀÀÆ÷ÁË£¬ÉÏÃæ¾ÍÓĞ»¶Ó­½çÃæÁË¡£
+	7.npm start å°±è¿è¡Œäº†ã€‚
+	å°±å¯ä»¥è¿è¡Œæµè§ˆå™¨äº†ï¼Œä¸Šé¢å°±æœ‰æ¬¢è¿ç•Œé¢äº†ã€‚
 
-	8.http://localhost:3000/ ¾ÍÓĞÁËwelcome ÁË¡£
+	8.http://localhost:3000/ å°±æœ‰äº†welcome äº†ã€‚
 
-	ÀïÃæÓĞÅäÖÃºÍÀïÃæÎÄ¼şµÄ×÷ÓÃ¡££¬
-	¿´blog 
+	é‡Œé¢æœ‰é…ç½®å’Œé‡Œé¢æ–‡ä»¶çš„ä½œç”¨ã€‚ï¼Œ
+	çœ‹blog 
 	1.https://smm113522.github.io/2017/01/25/nodejs+express%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/
-	2.https://smm113522.github.io/2017/01/26/nodejs+express%E4%BB%8E%E6%94%BE%E5%BC%83%E5%88%B0%E5%85%A5%E9%97%A8%E6%80%9D%E8%80%83/
+	2. https://smm113522.github.io/2017/01/26/nodejs+express%E4%BB%8E%E6%94%BE%E5%BC%83%E5%88%B0%E5%85%A5%E9%97%A8%E6%80%9D%E8%80%83/
 
-## WebStorm ÖĞ¿ª·¢ÏîÄ¿
+## WebStorm ä¸­å¼€å‘é¡¹ç›®
 ------------------------------------------------------------------
-	node ¶Ôhtml µÄÖ§³Ö
-	cmd½øÈëµ½ÏîÄ¿Ä¿Â¼£¬°²×°ejs£ºnpm install --save ejs
-	ÈÃnode js express Ö§htmlÄ£°å
-	µ¼Èëejs
+	node å¯¹html çš„æ”¯æŒ
+	cmdè¿›å…¥åˆ°é¡¹ç›®ç›®å½•ï¼Œå®‰è£…ejsï¼šnpm install --save ejs
+	è®©node js express æ”¯htmlæ¨¡æ¿
+	å¯¼å…¥ejs
 	var ejs = require('ejs');
-	Ö¸¶¨htmlÒıÇæ
+	æŒ‡å®šhtmlå¼•æ“
 	app.engine('.html', ejs.__express);
-	ÊÓÍ¼ÒıÇæ
+	è§†å›¾å¼•æ“
 	app.set('view engine', 'html');
 
-	htmlÒ³Ãæ´úÂëÓëejsÏàÍ¬
+	htmlé¡µé¢ä»£ç ä¸ejsç›¸åŒ
 	 <body>
 	  <%=title%>
 	 </body>
 --------------------------------------------------------------
-	Ìí¼Ó404 Ò³Ãæ
-	app.js ÖĞÌí¼Ó
+	æ·»åŠ 404 é¡µé¢
+	app.js ä¸­æ·»åŠ 
 	// 404
 	app.get('*', function(req, res){
 		res.render('404.html', {
@@ -107,120 +108,136 @@
 		})
 	});
 ----------------------------------------------------------------
-	1.°²×°Ä£¿é
-	npm install <Module Name> -²ÎÊı
+	1.å®‰è£…æ¨¡å—
+	npm install <Module Name> -å‚æ•°
 
-	Èç¹û´ø²ÎÊı-g±íÊ¾È«¾Ö°²×°£¬·ñÔòÖ»ÊÇ°²×°µ½Ä³¸öÄ¿Â¼ÏÂ¡£
+	å¦‚æœå¸¦å‚æ•°-gè¡¨ç¤ºå…¨å±€å®‰è£…ï¼Œå¦åˆ™åªæ˜¯å®‰è£…åˆ°æŸä¸ªç›®å½•ä¸‹ã€‚
 
-	ÒÔÏÂÊµÀı£¬ÎÒÃÇÊ¹ÓÃ npm ÃüÁî°²×°³£ÓÃµÄ Node.js web¿ò¼ÜÄ£¿é express
-	2.Ğ¶ÔØÄ£¿é
-	ÎÒÃÇ¿ÉÒÔÊ¹ÓÃÒÔÏÂÃüÁîÀ´Ğ¶ÔØ Node.js Ä£¿é¡£
+	ä»¥ä¸‹å®ä¾‹ï¼Œæˆ‘ä»¬ä½¿ç”¨ npm å‘½ä»¤å®‰è£…å¸¸ç”¨çš„ Node.js webæ¡†æ¶æ¨¡å— express
+	2.å¸è½½æ¨¡å—
+	æˆ‘ä»¬å¯ä»¥ä½¿ç”¨ä»¥ä¸‹å‘½ä»¤æ¥å¸è½½ Node.js æ¨¡å—ã€‚
 	npm uninstall <Module Name>
 
-	ÈçÏÈÊ¹ÓÃ°²×°Ö¸Áî°²×°bootstrap:
+	å¦‚å…ˆä½¿ç”¨å®‰è£…æŒ‡ä»¤å®‰è£…bootstrap:
 
 	npm install bootstrap
 
-	ÔÙÊ¹ÓÃĞ¶ÔØÖ¸ÁîÉ¾³ıÄ£¿é£º
+	å†ä½¿ç”¨å¸è½½æŒ‡ä»¤åˆ é™¤æ¨¡å—ï¼š
 
 	npm uninstall bootstrap
 
-	¿ÉÒÔµ½ /node_modules/ Ä¿Â¼ÏÂ²é¿´°üÊÇ·ñ»¹´æÔÚ
-	3.Ä£¿éÁĞ±í
-	Ê¹ÓÃÄ£¿éÁĞ±íÃüÁî¿ÉÒÔ·½±ãµÄ¿´µ½µ±Ç°ÏîÄ¿ÖĞÒÀÀµµÄ°ü£º
+	å¯ä»¥åˆ° /node_modules/ ç›®å½•ä¸‹æŸ¥çœ‹åŒ…æ˜¯å¦è¿˜å­˜åœ¨
+	3.æ¨¡å—åˆ—è¡¨
+	ä½¿ç”¨æ¨¡å—åˆ—è¡¨å‘½ä»¤å¯ä»¥æ–¹ä¾¿çš„çœ‹åˆ°å½“å‰é¡¹ç›®ä¸­ä¾èµ–çš„åŒ…ï¼š
 	npm ls
-	5.¸üĞÂÄ£¿é
-	ÎÒÃÇ¿ÉÒÔÊ¹ÓÃÒÔÏÂÃüÁî¸üĞÂÄ£¿é£º
-	npm update Ä£¿éÃû³Æ
-	npm up -g Ä£¿éÃû³Æ
-	6.ËÑË÷Ä£¿é
-	npm search Ä£¿éÃû³Æ
-	7.¸ü»»NPM ¾µÏñ
-	ÒòÎªnpmµÄ·şÎñÆ÷ÔÚ¹úÍâ£¬ÔÚÍøÂç×´Ì¬²»ºÃµÄÇé¿öÏÂÒıÈëÒ»¸öÄ£¿é»áÒòÎªÍøÂçÑÓ³Ù¶øÊ§°Ü£¬¿ÉÒÔ¸ü»»³É¹úÄÚËÙ¶È¸ü¿ìµÄ¾µÏñ·şÎñÆ÷£¬ÕâÀïÒÔÊ¹ÓÃÌÔ±¦ NPM ¾µÏñ£¨http://npm.taobao.org/£©ÎªÀı£º
+	5.æ›´æ–°æ¨¡å—
+	æˆ‘ä»¬å¯ä»¥ä½¿ç”¨ä»¥ä¸‹å‘½ä»¤æ›´æ–°æ¨¡å—ï¼š
+	npm update æ¨¡å—åç§°
+	npm up -g æ¨¡å—åç§°
+	6.æœç´¢æ¨¡å—
+	npm search æ¨¡å—åç§°
+	7.æ›´æ¢NPM é•œåƒ
+	å› ä¸ºnpmçš„æœåŠ¡å™¨åœ¨å›½å¤–ï¼Œåœ¨ç½‘ç»œçŠ¶æ€ä¸å¥½çš„æƒ…å†µä¸‹å¼•å…¥ä¸€ä¸ªæ¨¡å—ä¼šå› ä¸ºç½‘ç»œå»¶è¿Ÿè€Œå¤±è´¥ï¼Œå¯ä»¥æ›´æ¢æˆå›½å†…é€Ÿåº¦æ›´å¿«çš„é•œåƒæœåŠ¡å™¨ï¼Œè¿™é‡Œä»¥ä½¿ç”¨æ·˜å® NPM é•œåƒï¼ˆhttp://npm.taobao.org/ï¼‰ä¸ºä¾‹ï¼š
 
 	npm install -g cnpm --registry=https://registry.npm.taobao.org
 ---------------------------------------------------------------------------------------------
 	// app.engine('.html', ejs.__express);
 	// app.set('view engine', 'html');
 	
-	×ª»»³ÉÆäËûµÄºó×ºÃûµÄ·½·¨
+	è½¬æ¢æˆå…¶ä»–çš„åç¼€åçš„æ–¹æ³•
 ----------------------------------------------------------------------------------------------------
 
 
 	 
 
-##node ±ØÑ§µÄ¼¼Êõ 
-	1.Jade ÊÇÒ»¸ö¸ßĞÔÄÜµÄÄ£°åÒıÇæ£¬ËüÉîÊÜ Html Ó°Ïì£¬ËüÊÇÓÃ JavaScript ÊµÏÖµÄ£¬²¢ÇÒ¿ÉÒÔ¹© Node Ê¹ÓÃ¡£
+##node å¿…å­¦çš„æŠ€æœ¯ 
+	1.Jade æ˜¯ä¸€ä¸ªé«˜æ€§èƒ½çš„æ¨¡æ¿å¼•æ“ï¼Œå®ƒæ·±å— Html å½±å“ï¼Œå®ƒæ˜¯ç”¨ JavaScript å®ç°çš„ï¼Œå¹¶ä¸”å¯ä»¥ä¾› Node ä½¿ç”¨ã€‚
 	https://segmentfault.com/a/1190000000357534
 	2. html2jade
 	http://html2jade.vida.io/
 	http://www.html2jade.org/
+	3.vue 
+## node å¼€å‘åå°
+	åŸºäºNodejs+express4+Mongodb+Angularjså»ºç«‹webé¡¹ç›®
 
-## node ¿ª·¢ºóÌ¨
-	»ùÓÚNodejs+express4+Mongodb+Angularjs½¨Á¢webÏîÄ¿
 
-
-## nodeµÚÈı·½
-	0£¬utility   md5 ¼ÓÃÜ
+## nodeç¬¬ä¸‰æ–¹
+	0ï¼Œutility   md5 åŠ å¯†
 	
-	1£¬superagent	(http://visionmedia.github.io/superagent/ ) ÊÇ¸ö http ·½ÃæµÄ¿â£¬¿ÉÒÔ·¢Æğ get »ò post ÇëÇó¡£
+	1ï¼Œsuperagent	(http://visionmedia.github.io/superagent/ ) æ˜¯ä¸ª http æ–¹é¢çš„åº“ï¼Œå¯ä»¥å‘èµ· get æˆ– post è¯·æ±‚ã€‚
 
-	2£¬cheerio		(https://github.com/cheeriojs/cheerio ) ´ó¼Ò¿ÉÒÔÀí½â³ÉÒ»¸ö Node.js °æµÄ jquery£¬ÓÃÀ´´ÓÍøÒ³ÖĞÒÔ css selector È¡Êı¾İ£¬Ê¹ÓÃ·½Ê½¸ú jquery Ò»ÑùÒ»ÑùµÄ¡£	
+	2ï¼Œcheerio		(https://github.com/cheeriojs/cheerio ) å¤§å®¶å¯ä»¥ç†è§£æˆä¸€ä¸ª Node.js ç‰ˆçš„ jqueryï¼Œç”¨æ¥ä»ç½‘é¡µä¸­ä»¥ css selector å–æ•°æ®ï¼Œä½¿ç”¨æ–¹å¼è·Ÿ jquery ä¸€æ ·ä¸€æ ·çš„ã€‚	
 
-	3, express 		¹ÙÍøÊÇ http://expressjs.com/ £¬ÊÇ Node.js Ó¦ÓÃ×î¹ã·ºµÄ web ¿ò¼Ü£¬ÏÖÔÚÊÇ 4.x °æ±¾£¬Ëü·Ç³£±¡¡£¸ú Rails ±ÈÆğÀ´£¬ÍêÈ«Á½¸ö¼«¶Ë¡£ 
+	3, express 		å®˜ç½‘æ˜¯ http://expressjs.com/ ï¼Œæ˜¯ Node.js åº”ç”¨æœ€å¹¿æ³›çš„ web æ¡†æ¶ï¼Œç°åœ¨æ˜¯ 4.x ç‰ˆæœ¬ï¼Œå®ƒéå¸¸è–„ã€‚è·Ÿ Rails æ¯”èµ·æ¥ï¼Œå®Œå…¨ä¸¤ä¸ªæç«¯ã€‚ 
 
-	4£¬eventproxy   ¸ß²¢·¢ Èı¸ö¿â£ºsuperagent cheerio eventproxy(https://github.com/JacksonTian/eventproxy )	
+	4ï¼Œeventproxy   é«˜å¹¶å‘ ä¸‰ä¸ªåº“ï¼šsuperagent cheerio eventproxy(https://github.com/JacksonTian/eventproxy )	
 
-	5£¬async  
+	5ï¼Œasync  
 	
-	6£¬
-## node ÍÆ¼öÊé¼®
+	6ï¼Œ
+## node æ¨èä¹¦ç±
 
-	¡¶¾ÅÇ³Ò»ÉîNode.js¡·
-	Êé¼®µØÖ·<https://github.com/pana/node-books>
+	ã€Šä¹æµ…ä¸€æ·±Node.jsã€‹
+	ä¹¦ç±åœ°å€<https://github.com/pana/node-books>
 
-	
+## vue åŸºç¡€
 
-#php web ¿ª·¢
+## vue æ˜¯ä»€ä¹ˆ
 
-## »ù´¡Óï·¨
+## æ“ä½œåå°ä¹Ÿå¯ä»¥åš
 
-##  Ó¦ÓÃ
+## Weex é¡¹ç›®åŸºç¡€
+https://weex.apache.org/cn/guide/set-up-env.html
+## weex-toolkit
+https://github.com/weexteam/weex-toolkit
+## weex æ‰“åŒ… android
+http://www.weex.help/topic/58dcbbf22668808722df284f
+æ€ä¹ˆéƒ½ç¦»ä¸å¼€node
 
-## ¿ò¼Ü
 
-## ºÃµÄÑ§Ï°ÍøÕ¾
+#php web å¼€å‘
+
+## åŸºç¡€è¯­æ³•
+
+##  åº”ç”¨
+
+## æ¡†æ¶
+
+## å¥½çš„å­¦ä¹ ç½‘ç«™
 1.http://lib.csdn.net/base/17
 
 
 
-##  react-native android ¿ª·¢
+##  react-native android å¼€å‘
 
-## »·¾³´î½¨
+## ç¯å¢ƒæ­å»º
 	1.jdk 
 	2.sdk
-	win ´î½¨ http://www.jianshu.com/p/2fdc4655ddf8
-	Ñ§Ï°µØÖ· http://reactnative.cn/docs/0.20/getting-started.html
-	React Native »·¾³´î½¨ Çë²é¿´¹ÙÍø×ÊÁÏ£º
+	win æ­å»º http://www.jianshu.com/p/2fdc4655ddf8
+	å­¦ä¹ åœ°å€ http://reactnative.cn/docs/0.20/getting-started.html
+	React Native ç¯å¢ƒæ­å»º è¯·æŸ¥çœ‹å®˜ç½‘èµ„æ–™ï¼š
 	http://reactnative.cn/docs/0.41/getting-started.html
 	https://github.com/reactnativecn
-	// ÆäËûÆô¶¯·½Ê½
-	1.Ê×ÏÈÆô¶¯React Native Server 
+	// å…¶ä»–å¯åŠ¨æ–¹å¼
+	1.é¦–å…ˆå¯åŠ¨React Native Server 
 	react-native start 
-	2.ÖØĞÂ¿ªÒ»¸öÖÕ¶Ë(cmd), ÇĞ»»µ½ÏîÄ¿Ä¿Â¼°²×°APP 
+	2.é‡æ–°å¼€ä¸€ä¸ªç»ˆç«¯(cmd), åˆ‡æ¢åˆ°é¡¹ç›®ç›®å½•å®‰è£…APP 
 	cd android
 	gradlew.bat installDebug
 
-    Ö´ĞĞgradlew.bat installDebugÊ±£¬ÇëÏÈ¿ªÆôGenymotionÄ£ÄâÆ÷
-	3.»¹¿ÉÒÔ
+    æ‰§è¡Œgradlew.bat installDebugæ—¶ï¼Œè¯·å…ˆå¼€å¯Genymotionæ¨¡æ‹Ÿå™¨
+	3.è¿˜å¯ä»¥
 	react-native run-android
-## °¸Àı 
+## æ¡ˆä¾‹ 
 	https://github.com/bigsui/shopping-react-native
 	
 	
-## Ç°¶Ë
+## å‰ç«¯
 
-## ºÃµÄblog
+## å¥½çš„blog
 http://yrq110.me/
 
+## node æ‰“åŒ…
+
+## å…¶ä»–ç³»ç»Ÿä¸‹çš„ node å®‰è£…å’Œæ‰“åŒ…
 
