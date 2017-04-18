@@ -4,7 +4,9 @@
 	https://www.ibm.com/developerworks/cn/opensource/os-nodejs/
 ## node 基础语法教程
 http://www.hubwiz.com/course/5359f6f6ec7452081a7873d8/
-	
+
+	http://blog.xcoder.in/node-learning/2013/08/16/node-3-base/
+
 ## node 开发工具
 	1.JetBrains WebStorm 2016.3.2(64)
 	2.HBuilder
@@ -147,7 +149,9 @@ http://www.hubwiz.com/course/5359f6f6ec7452081a7873d8/
 	转换成其他的后缀名的方法
 ----------------------------------------------------------------------------------------------------
 
-
+## node 项目
+https://github.com/nswbmw/N-blog
+https://github.com/jyy12/AcCms
 	 
 
 ##node 必学的技术 
@@ -181,13 +185,16 @@ http://www.hubwiz.com/course/5359f6f6ec7452081a7873d8/
 	书籍地址<https://github.com/pana/node-books>
 
 ## vue 基础
+http://cn.vuejs.org/v2/guide/
 
 ## vue 是什么
-
+Vue.js 不是一个框架，它只是一个提供 MVVM 风格的双向数据绑定的库，专注于 UI 层面。Vue.js 提供的核心是 MVVM 中的 VM
 ## 操作后台也可以做
 
 ## Weex 项目基础
 https://weex.apache.org/cn/guide/set-up-env.html
+https://weex.apache.org/cn/references/components/a.html
+
 ## weex-toolkit
 https://github.com/weexteam/weex-toolkit
 ## weex 打包 android
