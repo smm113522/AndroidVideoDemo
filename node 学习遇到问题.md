@@ -186,7 +186,7 @@ https://github.com/jyy12/AcCms
 
 ## vue 基础
 http://cn.vuejs.org/v2/guide/
-
+http://www.cnblogs.com/rik28/p/6024425.html
 ## vue 是什么
 Vue.js 不是一个框架，它只是一个提供 MVVM 风格的双向数据绑定的库，专注于 UI 层面。Vue.js 提供的核心是 MVVM 中的 VM
 ## 操作后台也可以做
@@ -200,6 +200,8 @@ https://github.com/weexteam/weex-toolkit
 ## weex 打包 android
 http://www.weex.help/topic/58dcbbf22668808722df284f
 怎么都离不开node
+
+weexpack 去创建和打包apk
 
 
 #php web 开发
@@ -235,6 +237,18 @@ http://www.weex.help/topic/58dcbbf22668808722df284f
     执行gradlew.bat installDebug时，请先开启Genymotion模拟器
 	3.还可以
 	react-native run-android
+
+输入react-native init AwesomeProject，等待一段时间（较慢）
+cd AwesomeProject
+npm install
+react-native start
+
+react-native run-android
+即可了
+
+## demo
+
+
 ## 案例 
 	https://github.com/bigsui/shopping-react-native
 	
@@ -247,4 +261,5 @@ http://yrq110.me/
 ## node 打包
 
 ## 其他系统下的 node 安装和打包
+html5打包 webpack
 
