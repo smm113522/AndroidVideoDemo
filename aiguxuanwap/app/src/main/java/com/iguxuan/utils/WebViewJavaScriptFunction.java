@@ -1,4 +1,4 @@
-package com.kesun.aiguxuanwap.utils;
+package com.iguxuan.utils;
 
 public interface WebViewJavaScriptFunction {
 

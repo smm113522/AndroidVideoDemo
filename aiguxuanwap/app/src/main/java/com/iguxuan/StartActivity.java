@@ -1,18 +1,12 @@
-package com.kesun.aiguxuanwap;
+package com.iguxuan;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
-import android.os.Message;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
-import android.view.View;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 
-import java.util.Random;
+import com.iguxuan.R;
 
 /**
  * Created by Administrator on 2017/3/27.

@@ -4,10 +4,10 @@ android {
 
     signingConfigs {
         release {
-            storeFile file("keystone.jks")//keystore的路径
-            storePassword "kesun1"
-            keyAlias "kesun1"
-            keyPassword "kesun1"
+            storeFile file("iguxuankeystore.jks")//keystore的路径
+            storePassword "iguxuan703"
+            keyAlias "爱股轩"
+            keyPassword "iguxuan703"
         }
         debug {
         }
@@ -16,30 +16,38 @@ android {
     compileSdkVersion 25
     buildToolsVersion "25.0.2"
     defaultConfig {
-        applicationId "com.kesun.aiguxuanwap"
+        applicationId "com.iguxuan"
         minSdkVersion 14
         targetSdkVersion 25
-        versionCode 2
-        versionName "1.0"
+        versionCode 212
+        versionName "2.1.2"
 
         ndk {
             abiFilters "armeabi", "armeabi-v7a", "x86", "mips"
         }
+
+        buildConfigField "String","HTTPURL",'"http://wap.iguxuan.com/"'
+
+        resValue "string", "app_name", "爱股轩"
+        resValue "string", "PGYER_APPID", "7d238948f6bfe1a750ae2cac4881eab1"
+
 
     }
     buildTypes {
         release {
             signingConfig signingConfigs.release
             minifyEnabled true
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            proguardFiles 'proguard-rules.pro'
             //signingConfig defaultConfig.config
             pseudoLocalesEnabled false
             zipAlignEnabled true
+
         }
         debug {
             //    signingConfig defaultConfig.config
             signingConfig signingConfigs.release
             multiDexEnabled true
+            zipAlignEnabled true
         }
     }
     sourceSets {
@@ -54,7 +62,4 @@ dependencies {
     compile 'com.android.support:appcompat-v7:25.2.0'
     compile project(':pugongyinglib')
 
-//    compile files('libs/tbs_sdk_thirdapp_v3.1.0.1034_43100_sharewithdownload_obfs_20170301_182143.jar')
-//    compile 'com.hjhrq1991.library.tbs:tbsjsbridge:1.0.0'
-//    compile 'com.hjhrq1991.library:jsbridge:1.0.6'
 }

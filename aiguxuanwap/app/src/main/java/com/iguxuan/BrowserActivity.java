@@ -1,4 +1,4 @@
-package com.kesun.aiguxuanwap;
+package com.iguxuan;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
@@ -19,7 +19,8 @@ import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.Toast;
 
-import com.kesun.aiguxuanwap.utils.X5WebView;
+import com.iguxuan.R;
+import com.iguxuan.utils.X5WebView;
 import com.tencent.smtt.export.external.interfaces.IX5WebChromeClient.CustomViewCallback;
 import com.tencent.smtt.export.external.interfaces.JsResult;
 import com.tencent.smtt.sdk.CookieSyncManager;
@@ -32,9 +33,6 @@ import com.tencent.smtt.sdk.WebView;
 import com.tencent.smtt.sdk.WebViewClient;
 import com.tencent.smtt.utils.TbsLog;
 
-import java.net.MalformedURLException;
-import java.net.URL;
-
 public class BrowserActivity extends Activity {
     /**
      * 作为一个浏览器的示例展示出来，采用android+web的模式
@@ -43,9 +41,8 @@ public class BrowserActivity extends Activity {
     private ViewGroup mViewParent;
 
 
-    private static final String mHomeUrl = "http://aiguxuanwap1.com.bdy15421.samyon.com/";
+    private static final String mHomeUrl = BuildConfig.HTTPURL;
     private static final String TAG = "SdkDemo";
-    private static final int MAX_LENGTH = 14;
     private boolean mNeedTestPage = false;
 
     private final int disable = 120;
@@ -53,9 +50,10 @@ public class BrowserActivity extends Activity {
 
     private ValueCallback<Uri> uploadFile;
 
-    private URL mIntentUrl;
+//    private URL mIntentUrl;
     private static final int REQUEST_CODE_READ_EXTERNAL_STORAGE_PERMISSIONS = 1;
     private static final int REQUEST_CODE_WRITE_EXTERNAL_STORAGE = 2;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -74,17 +72,17 @@ public class BrowserActivity extends Activity {
         }
 
 
-        Intent intent = getIntent();
-        if (intent != null) {
-            try {
-                mIntentUrl = new URL(intent.getData().toString());
-            } catch (MalformedURLException e) {
-                e.printStackTrace();
-            } catch (NullPointerException e) {
-
-            } catch (Exception e) {
-            }
-        }
+//        Intent intent = getIntent();
+//        if (intent != null) {
+//            try {
+//                mIntentUrl = new URL(intent.getData().toString());
+//            } catch (MalformedURLException e) {
+//                e.printStackTrace();
+//            } catch (NullPointerException e) {
+//
+//            } catch (Exception e) {
+//            }
+//        }
         //
         try {
             if (Integer.parseInt(android.os.Build.VERSION.SDK) >= 11) {
@@ -97,7 +95,7 @@ public class BrowserActivity extends Activity {
         }
 
 		/*
-		 * getWindow().addFlags(
+         * getWindow().addFlags(
 		 * android.view.WindowManager.LayoutParams.FLAG_FULLSCREEN);
 		 */
         setContentView(R.layout.activity_browser);
@@ -157,6 +155,7 @@ public class BrowserActivity extends Activity {
 
             // /////////////////////////////////////////////////////////
             //
+
             /**
              * 全屏播放配置
              */
@@ -265,11 +264,11 @@ public class BrowserActivity extends Activity {
         // webSetting.setRenderPriority(WebSettings.RenderPriority.HIGH);
         // webSetting.setPreFectch(true);
         long time = System.currentTimeMillis();
-        if (mIntentUrl == null) {
-            mWebView.loadUrl(mHomeUrl);
-        } else {
-            mWebView.loadUrl(mIntentUrl.toString());
-        }
+//        if (mIntentUrl == null) {
+        mWebView.loadUrl(mHomeUrl);
+//        } else {
+//            mWebView.loadUrl(mIntentUrl.toString());
+//        }
         TbsLog.d("time-cost", "cost time: "
                 + (System.currentTimeMillis() - time));
         CookieSyncManager.createInstance(this);
@@ -279,11 +278,10 @@ public class BrowserActivity extends Activity {
     private void initBtnListenser() {
 
 
-
     }
 
-    boolean[] m_selected = new boolean[] { true, true, true, true, false,
-            false, true };
+    boolean[] m_selected = new boolean[]{true, true, true, true, false,
+            false, true};
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -418,6 +416,7 @@ public class BrowserActivity extends Activity {
             }
         }
     }
+
     boolean isExit = false;
 
     Handler mHandler = new Handler() {
@@ -430,7 +429,8 @@ public class BrowserActivity extends Activity {
         }
 
     };
-    public boolean exit(){
+
+    public boolean exit() {
         if (!isExit) {
             isExit = true;
             Toast.makeText(getApplicationContext(), "再按一次退出程序", Toast.LENGTH_SHORT).show();

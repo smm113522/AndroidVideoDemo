@@ -1,4 +1,4 @@
-package com.kesun.aiguxuanwap;
+package com.iguxuan;
 
 import android.app.Application;
 import android.util.Log;
