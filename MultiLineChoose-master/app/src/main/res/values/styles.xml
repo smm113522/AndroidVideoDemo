@@ -1,0 +1,136 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+
+    <!--https://github.com/jackuhan/FlowlayoutTags-->
+    <style name="MultiLineChooseLayoutTags">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="item_textColor">#49C120</item>
+        <item name="item_backgroundColor">#FFFFFF</item>
+        <item name="item_selectedTextColor">#FFFFFF</item>
+        <item name="item_selectedBackgroundColor">#49C120</item>
+        <item name="item_textSize">13sp</item>
+        <item name="item_horizontalSpacing">5dp</item>
+        <item name="item_verticalSpacing">5dp</item>
+        <item name="item_horizontalPadding">12dp</item>
+        <item name="item_verticalPadding">3dp</item>
+        <item name="item_radius">5dp</item>
+        <item name="item_selectedStrokeColor">#49C120</item>
+        <item name="item_strokeWidth">1px</item>
+        <item name="item_multiChooseable">true</item>
+        <item name="item_singleLine">true</item>
+        <item name="item_width">wrap_content</item>
+        <item name="item_height">wrap_content</item>
+    </style>
+
+    <style name="MultiLineChooseLayoutTags.SingleChoose" parent="MultiLineChooseLayoutTags">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="item_textColor">#666666</item>
+        <item name="item_backgroundColor">#ffffff</item>
+        <item name="item_selectedTextColor">#ffffff</item>
+        <item name="item_selectedBackgroundColor">#7289ff</item>
+        <item name="item_radius">0dp</item>
+        <item name="item_strokeColor">#939393</item>
+        <item name="item_selectedStrokeColor">#939393</item>
+        <item name="item_strokeWidth">1px</item>
+        <item name="item_horizontalSpacing">10dp</item>
+        <!--这里设置固定大小,padding为0-->
+        <item name="item_horizontalPadding">10dp</item>
+        <item name="item_verticalPadding">5dp</item>
+        <!--单位dp-->
+        <item name="item_width">80</item>
+        <item name="item_height">40</item>
+        <!--限制tag显示长度,规则查看Textview-->
+        <item name="item_maxEms">5</item>
+        <!--单选-->
+        <item name="item_multiChooseable">false</item>
+    </style>
+
+    <style name="MultiLineChooseLayoutTags.FlowLayout" parent="MultiLineChooseLayoutTags">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="item_textColor">#666666</item>
+        <item name="item_backgroundColor">#ffffff</item>
+        <item name="item_selectedTextColor">#ffffff</item>
+        <item name="item_selectedBackgroundColor">#7289ff</item>
+        <item name="item_radius">0dp</item>
+        <item name="item_strokeColor">#939393</item>
+        <item name="item_selectedStrokeColor">#939393</item>
+        <item name="item_strokeWidth">1px</item>
+        <item name="item_horizontalSpacing">10dp</item>
+        <!--这里设置固定大小,padding为0-->
+        <item name="item_horizontalPadding">10dp</item>
+        <item name="item_verticalPadding">5dp</item>
+        <!--单位dp-->
+        <item name="item_width">wrap_content</item>
+        <item name="item_height">wrap_content</item>
+        <!--限制tag显示长度,规则查看Textview-->
+        <item name="item_maxEms">5</item>
+        <!--多选-->
+        <item name="item_multiChooseable">true</item>
+    </style>
+
+    <style name="MultiLineChooseLayoutTags.MultiChoose" parent="MultiLineChooseLayoutTags">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="item_textColor">#666666</item>
+        <item name="item_backgroundColor">#ffffff</item>
+        <item name="item_selectedTextColor">#ffffff</item>
+        <item name="item_selectedBackgroundColor">#7289ff</item>
+        <item name="item_radius">0dp</item>
+        <item name="item_strokeColor">#939393</item>
+        <item name="item_selectedStrokeColor">#939393</item>
+        <item name="item_strokeWidth">1px</item>
+        <item name="item_horizontalSpacing">10dp</item>
+        <!--这里设置固定大小,padding为0-->
+        <item name="item_horizontalPadding">10dp</item>
+        <item name="item_verticalPadding">5dp</item>
+        <!--单位dp-->
+        <item name="item_width">80</item>
+        <item name="item_height">40</item>
+        <!--限制tag显示长度,规则查看Textview-->
+        <item name="item_maxEms">5</item>
+        <!--多选-->
+        <item name="item_multiChooseable">true</item>
+    </style>
+
+    <!-- 瀑布流 单选 -->
+
+    <style name="MultiLineChooseLayoutTags.FlowLayout_SingleChoose" parent="MultiLineChooseLayoutTags">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="item_textColor">#666666</item>
+        <item name="item_backgroundColor">#ffffff</item>
+        <item name="item_selectedTextColor">#ffffff</item>
+        <item name="item_selectedBackgroundColor">#7289ff</item>
+        <item name="item_radius">0dp</item>
+        <item name="item_strokeColor">#939393</item>
+        <item name="item_selectedStrokeColor">#939393</item>
+        <item name="item_strokeWidth">1px</item>
+        <item name="item_horizontalSpacing">10dp</item>
+        <!--这里设置固定大小,padding为0-->
+        <item name="item_horizontalPadding">10dp</item>
+        <item name="item_verticalPadding">5dp</item>
+        <!--单位dp-->
+        <item name="item_width">wrap_content</item>
+        <item name="item_height">wrap_content</item>
+        <!--限制tag显示长度,规则查看Textview-->
+        <item name="item_maxEms">5</item>
+        <!--多选-->
+        <item name="item_multiChooseable">false</item>
+    </style>
+
+</resources>
