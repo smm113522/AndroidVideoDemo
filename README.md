@@ -8,3 +8,34 @@
 
 缺少了这么方面的意识了。
 今天开始补充。
+
+aiguxuanwap  
+爱国轩作品 
+主要是封装web url 网站问题。
+
+AndFixDemo  热修复问题
+
+Android例子源码GPS自动定位城市首字母导航  现在很多了
+
+BottomNavigationView 里面的诸多的使用
+
+multilinechooselib 多选和单选的使用
+
+
+MvpDemo mvp 的使用
+
+https://github.com/tajchert/WaitingDots
+
+zxinglib 二维码 相关的
+
+日历 相关的
+在shimengmeng.win 博客中
+
+支付 p++
+
+还是对原生的较为好。。
+
+Gen_Signature_Android2 签名
+
+ApkToolPlus_1.0  apk  反编译
+
