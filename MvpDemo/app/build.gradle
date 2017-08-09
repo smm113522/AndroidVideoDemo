@@ -26,4 +26,12 @@ dependencies {
     compile 'com.jakewharton:butterknife:8.5.1'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.5.1'
     compile 'com.android.support.constraint:constraint-layout:1.0.0-beta4'
+
+    compile 'io.reactivex.rxjava2:rxandroid:2.0.1' // Because RxAndroid releases are few and far between, it is recommended you also // explicitly depend on RxJava's latest version for bug fixes and new features.
+    compile 'io.reactivex.rxjava2:rxjava:2.0.1'
+
+    compile 'com.squareup.retrofit2:retrofit:2.1.0'
+//    compile 'com.github.cpoopc:RetrofitRxCache:v1.0.5'
+    compile "com.github.VictorAlbertos.RxCache:core:1.4.6"
+    compile 'com.jakewharton:disklrucache:2.0.2'
 }

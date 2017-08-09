@@ -16,6 +16,10 @@
             </intent-filter>
         </activity>
         <activity android:name=".IndexActivity"></activity>
+        <activity android:name=".LoginMvpActivity"></activity>
+        <activity android:name=".RetrofitActivity"></activity>
+        <activity android:name=".RxCacheActivity"></activity>
+        <activity android:name=".RxjavaActivity"></activity>
     </application>
 
 </manifest>

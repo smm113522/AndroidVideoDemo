@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">AndFixDemo</string>
+    <string name="versionchecklib_download_progress">下载进度:%d%%/100%%</string>
+    <string name="versionchecklib_download_finish">下载完成，点击安装</string>
+    <string name="versionchecklib_download_fail">下载失败，点击重试</string>
+</resources>
