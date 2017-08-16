@@ -27,6 +27,16 @@ public class FragmentDemoActivity extends BaseActivity implements BottomNavigati
     private LocationFragment mLocationFragment;
 
     @Override
+    public int getLayoutId() {
+        return 0;
+    }
+
+    @Override
+    public void init() {
+
+    }
+
+    @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fragment);

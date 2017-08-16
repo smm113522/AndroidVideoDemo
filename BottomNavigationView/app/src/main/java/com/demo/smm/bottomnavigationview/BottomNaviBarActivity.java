@@ -23,6 +23,17 @@ public class BottomNaviBarActivity extends BaseActivity implements BottomNavigat
     @BindView(R.id.bottom_navigation_bar)
     BottomNavigationBar bottomNavigationBar;
     int lastSelectedPosition = 0;
+
+    @Override
+    public int getLayoutId() {
+        return 0;
+    }
+
+    @Override
+    public void init() {
+
+    }
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

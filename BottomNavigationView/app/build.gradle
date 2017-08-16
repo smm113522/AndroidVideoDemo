@@ -4,6 +4,11 @@ apply plugin: 'com.jakewharton.butterknife'
 android {
     compileSdkVersion 25
     buildToolsVersion "25.0.1"
+
+    dataBinding {
+        enabled = true
+    }
+
     defaultConfig {
         applicationId "com.demo.smm.bottomnavigationview"
         minSdkVersion 19
@@ -32,4 +37,7 @@ dependencies {
     compile 'com.balysv:material-ripple:1.0.2'
     compile 'net.oschina.common:common:0.1.5'
     compile project(':bottom-bar')
+
+    compile 'tk.zielony:carbon:0.14.0'
+    compile project(path: ':weblib')
 }

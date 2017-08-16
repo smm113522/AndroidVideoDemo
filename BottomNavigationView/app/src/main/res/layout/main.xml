@@ -1,18 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white_alpha_16"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <ViewStub
-        android:id="@+id/viewstub"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout="@layout/viewstub_main"/>
+        android:layout_weight="1"
+        android:layout_height="match_parent">
+        <ViewStub
+            android:id="@+id/viewstub"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/red_50"
+            android:layout="@layout/viewstub_main"/>
+    </LinearLayout>
+
+
 
     <LinearLayout
         android:id="@+id/leading"
         android:layout_width="match_parent"
+        android:background="@color/red_50"
+        android:layout_weight="1"
         android:layout_height="match_parent"
+        android:orientation="horizontal"
         android:gravity="center" >
 
         <ProgressBar
@@ -21,7 +34,7 @@
             android:layout_gravity="center"/>
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
             android:text="加载中..."/>

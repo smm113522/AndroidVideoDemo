@@ -22,6 +22,16 @@ public class BottomBarActivity extends BaseActivity {
     private com.roughike.bottombar.BottomBar bottomBar;
 
     @Override
+    public int getLayoutId() {
+        return 0;
+    }
+
+    @Override
+    public void init() {
+
+    }
+
+    @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_buttom_bar);

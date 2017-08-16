@@ -68,6 +68,16 @@ public class AllBottonActivity extends BaseActivity implements View.OnClickListe
     BadgeItem numberBadgeItem;
 
     @Override
+    public int getLayoutId() {
+        return R.layout.activity_all;
+    }
+
+    @Override
+    public void init() {
+
+    }
+
+    @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_all);

@@ -6,14 +6,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.ViewStub;
 import android.widget.LinearLayout;
-import android.widget.TextView;
 
-import com.balysv.materialripple.MaterialRippleLayout;
 import com.demo.smm.bottomnavigationview.osc.OsActivity;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.OnClick;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
