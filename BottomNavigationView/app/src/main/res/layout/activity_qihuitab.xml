@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+    <com.github.brioal.qihutablayout.QiHuTabLayout
+        xmlns:QiHuTab="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/qhtl_3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/qhtl_2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="32dp">
+
+        <com.github.brioal.qihutablayout.QiHuTab
+            android:id="@+id/qiHuTab"
+            QiHuTab:noticeColor="#8BC34A"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            QiHuTab:normalDrawableResId="@drawable/ic_001_1"
+            QiHuTab:normalText="我的"
+            QiHuTab:normalTextColor="#666666"
+            QiHuTab:noticeCount="8"
+            QiHuTab:selectedDrawableResId="@drawable/ic_001_1"
+            QiHuTab:selectedText="我的"
+            QiHuTab:selectedTextColor="#FFFFFF"
+            QiHuTab:type="center" />
+
+        <com.github.brioal.qihutablayout.QiHuTab
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            QiHuTab:isSelected="true"
+            QiHuTab:normalDrawableResId="@drawable/ic_002_1"
+            QiHuTab:normalText="微信"
+            QiHuTab:normalTextColor="#666666"
+            QiHuTab:noticeCount="69"
+            QiHuTab:selectedDrawableResId="@drawable/ic_002_2"
+            QiHuTab:selectedText="微信"
+            QiHuTab:selectedTextColor="#FFFFFF" />
+
+
+        <com.github.brioal.qihutablayout.QiHuTab
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            QiHuTab:normalDrawableResId="@drawable/ic_003_1"
+            QiHuTab:normalText="大礼包"
+            QiHuTab:normalTextColor="#666666"
+            QiHuTab:noticeCount="35"
+            QiHuTab:selectedDrawableResId="@drawable/ic_003_2"
+            QiHuTab:selectedText="大礼包"
+            QiHuTab:selectedTextColor="#FFFFFF"
+            QiHuTab:type="center" />
+
+    </com.github.brioal.qihutablayout.QiHuTabLayout>
+
+    <com.github.brioal.qihutablayout.QiHuTabLayout
+        android:id="@+id/qhtl_2"
+        xmlns:QiHuTab="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/qhtl"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="32dp">
+
+        <com.github.brioal.qihutablayout.QiHuTab
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            QiHuTab:animDuration="20"
+            QiHuTab:normalDrawableResId="@drawable/ic_001_1"
+            QiHuTab:normalText="我的"
+            QiHuTab:normalTextColor="#666666"
+            QiHuTab:noticeCount="10"
+            QiHuTab:selectedDrawableResId="@drawable/ic_001_2"
+            QiHuTab:selectedText="我的"
+            QiHuTab:selectedTextColor="#FFFFFF"
+            QiHuTab:type="left" />
+
+        <com.github.brioal.qihutablayout.QiHuTab
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            QiHuTab:isSelected="true"
+            QiHuTab:noticeColor="#009688"
+            QiHuTab:normalDrawableResId="@drawable/ic_002_1"
+            QiHuTab:normalText="微信"
+            QiHuTab:normalTextColor="#666666"
+            QiHuTab:noticeCount="22"
+            QiHuTab:selectedDrawableResId="@drawable/ic_002_2"
+            QiHuTab:selectedText="微信"
+            QiHuTab:selectedTextColor="#FFFFFF" />
+
+        <com.github.brioal.qihutablayout.QiHuTab
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            QiHuTab:normalDrawableResId="@drawable/ic_003_1"
+            QiHuTab:normalText="大礼包"
+            QiHuTab:normalTextColor="#666666"
+            QiHuTab:noticeCount="477777"
+            QiHuTab:selectedDrawableResId="@drawable/ic_003_2"
+            QiHuTab:selectedText="大礼包"
+            QiHuTab:selectedTextColor="#FFFFFF" />
+
+
+        <com.github.brioal.qihutablayout.QiHuTab
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            QiHuTab:animDuration="20"
+            QiHuTab:normalDrawableResId="@drawable/ic_004_1"
+            QiHuTab:normalText="排行榜"
+            QiHuTab:normalTextColor="#666666"
+            QiHuTab:noticeCount="72"
+            QiHuTab:selectedDrawableResId="@drawable/ic_004_2"
+            QiHuTab:selectedText="排行榜"
+            QiHuTab:selectedTextColor="#FFFFFF"
+            QiHuTab:type="right" />
+
+    </com.github.brioal.qihutablayout.QiHuTabLayout>
+
+    <com.github.brioal.qihutablayout.QiHuTabLayout
+        android:id="@+id/qhtl"
+        xmlns:QiHuTab="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" >
+
+        <com.github.brioal.qihutablayout.QiHuTab
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            QiHuTab:animDuration="20"
+            QiHuTab:isSelected="true"
+            QiHuTab:normalDrawableResId="@drawable/ic_001_1"
+            QiHuTab:normalText="我的"
+            QiHuTab:normalTextColor="#666666"
+            QiHuTab:normalTextSize="11sp"
+            QiHuTab:noticeCount="89"
+            QiHuTab:selectedDrawableResId="@drawable/ic_001_2"
+            QiHuTab:selectedText="我的"
+            QiHuTab:selectedTextColor="#FFFFFF"
+            QiHuTab:selectedTextSize="12sp"
+            QiHuTab:type="left" />
+
+        <com.github.brioal.qihutablayout.QiHuTab
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            QiHuTab:normalDrawableResId="@drawable/ic_002_1"
+            QiHuTab:normalText="微信"
+            QiHuTab:normalTextColor="#666666"
+            QiHuTab:normalTextSize="11sp"
+            QiHuTab:noticeCount="37"
+            QiHuTab:selectedDrawableResId="@drawable/ic_002_2"
+            QiHuTab:selectedText="微信"
+            QiHuTab:selectedTextColor="#FFFFFF"
+            QiHuTab:selectedTextSize="12sp" />
+
+        <com.github.brioal.qihutablayout.QiHuTab
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            QiHuTab:normalDrawableResId="@drawable/ic_003_1"
+            QiHuTab:normalText="大礼包"
+            QiHuTab:normalTextColor="#666666"
+            QiHuTab:normalTextSize="11sp"
+            QiHuTab:noticeCount="25"
+            QiHuTab:selectedDrawableResId="@drawable/ic_003_2"
+            QiHuTab:selectedText="大礼包"
+            QiHuTab:selectedTextColor="#FFFFFF"
+            QiHuTab:selectedTextSize="12sp" />
+
+        <com.github.brioal.qihutablayout.QiHuTab
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            QiHuTab:normalDrawableResId="@drawable/ic_004_1"
+            QiHuTab:normalText="排行榜"
+            QiHuTab:normalTextColor="#666666"
+            QiHuTab:normalTextSize="11sp"
+            QiHuTab:noticeCount="99+"
+            QiHuTab:noticeColor="#666666"
+            QiHuTab:selectedDrawableResId="@drawable/ic_004_2"
+            QiHuTab:selectedText="排行榜"
+            QiHuTab:selectedTextColor="#FFFFFF"
+            QiHuTab:selectedTextSize="12sp" />
+
+        <com.github.brioal.qihutablayout.QiHuTab
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            QiHuTab:animDuration="20"
+            QiHuTab:normalDrawableResId="@drawable/ic_005_1"
+            QiHuTab:normalText="现金券"
+            QiHuTab:normalTextColor="#666666"
+            QiHuTab:normalTextSize="11sp"
+            QiHuTab:noticeCount="96"
+            QiHuTab:selectedDrawableResId="@drawable/ic_005_2"
+            QiHuTab:selectedText="现金券"
+            QiHuTab:selectedTextColor="#FFFFFF"
+            QiHuTab:selectedTextSize="12sp"
+            QiHuTab:type="right" />
+
+    </com.github.brioal.qihutablayout.QiHuTabLayout>
+
+
+</RelativeLayout>

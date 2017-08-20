@@ -11,6 +11,7 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
 import com.demo.smm.bottomnavigationview.R;
+import com.demo.smm.bottomnavigationview.utils.StatusBarUtil;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -48,6 +49,8 @@ public class AboutFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_about, container, false);
+
+        StatusBarUtil.setPaddingSmart(getContext(), view.findViewById(R.id.toolbar));
         unbinder = ButterKnife.bind(this, view);
         toolbar.setTitle("关于我");
         rightIcon.setVisibility(View.GONE);

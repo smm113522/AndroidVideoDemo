@@ -6,10 +6,11 @@ import android.support.v4.view.ViewPager;
 import android.view.MenuItem;
 
 import com.demo.smm.bottomnavigationview.BaseActivity;
-import com.demo.smm.bottomnavigationview.NewLocationFragment;
 import com.demo.smm.bottomnavigationview.R;
-import com.demo.smm.bottomnavigationview.ViewPagerAdapter;
+import com.demo.smm.bottomnavigationview.adapter.ViewPagerAdapter;
 import com.demo.smm.bottomnavigationview.fragment.AboutFragment;
+import com.demo.smm.bottomnavigationview.fragment.FristFragment;
+import com.demo.smm.bottomnavigationview.fragment.NewLocationFragment;
 import com.demo.smm.bottomnavigationview.utils.StatusBarUtil;
 import com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx;
 
@@ -27,8 +28,8 @@ public class DemoActivity extends BaseActivity {
     @BindView(R.id.viewpager)
     ViewPager viewpager;
 
-    private NewLocationFragment mLocationFragment;
     MenuItem prevMenuItem;
+
     @Override
     public int getLayoutId() {
         return R.layout.activity_demo;
@@ -103,8 +104,8 @@ public class DemoActivity extends BaseActivity {
     private void setupViewPager(ViewPager viewPager) {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
 
-        adapter.addFragment(mLocationFragment.newInstance("拨号"));
-        adapter.addFragment(mLocationFragment.newInstance("信息"));
+        adapter.addFragment(FristFragment.newInstance());
+        adapter.addFragment(NewLocationFragment.newInstance());
         adapter.addFragment(AboutFragment.newInstance());
         viewPager.setAdapter(adapter);
     }

@@ -10,9 +10,8 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.view.View;
-
-import com.demo.smm.bottomnavigationview.NewLocationFragment;
 import com.demo.smm.bottomnavigationview.R;
+import com.demo.smm.bottomnavigationview.fragment.NewLocationFragment;
 
 import net.oschina.common.widget.drawable.shape.BorderShape;
 
@@ -27,8 +26,6 @@ public class NavFragment extends BaseFragment implements View.OnClickListener{
     NavigationButton mNavNews;
     @BindView(R.id.nav_item_tweet)
     NavigationButton mNavTweet;
-    @BindView(R.id.nav_item_ma)
-    NavigationButton mNavMa;
     @BindView(R.id.nav_item_explore)
     NavigationButton mNavExplore;
     @BindView(R.id.nav_item_me)
@@ -62,23 +59,20 @@ public class NavFragment extends BaseFragment implements View.OnClickListener{
         });
         root.setBackgroundDrawable(layerDrawable);
 
-        mNavNews.init(R.drawable.tab_icon_shouye,
+        mNavNews.init(R.drawable.tab_icon_new1,
                 R.string.main_tab_name_shouye,
                 NewLocationFragment.class);
 
-        mNavTweet.init(R.drawable.tab_icon_xiangmu,
+        mNavTweet.init(R.drawable.tab_icon_tweet1,
                 R.string.main_tab_name_xiangmu,
                 NewLocationFragment.class);
 
-        mNavMa.init(R.drawable.tab_icon_kehu,
-                R.string.main_tab_name_kehu,
-                NewLocationFragment.class);
 
-        mNavExplore.init(R.drawable.tab_icon_news,
+        mNavExplore.init(R.drawable.tab_icon_explore1,
                 R.string.main_tab_name_news,
                 NewLocationFragment.class);
 
-        mNavMe.init(R.drawable.tab_icon_me,
+        mNavMe.init(R.drawable.tab_icon_me1,
                 R.string.main_tab_name_wode,
                 NewLocationFragment.class);
 
@@ -86,7 +80,7 @@ public class NavFragment extends BaseFragment implements View.OnClickListener{
 
     @OnClick({R.id.nav_item_news, R.id.nav_item_tweet,
             R.id.nav_item_explore, R.id.nav_item_me,
-            R.id.nav_item_ma})
+            R.id.nav_item_tweet_pub})
     @Override
     public void onClick(View v) {
         if (v instanceof NavigationButton) {

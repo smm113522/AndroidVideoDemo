@@ -28,19 +28,12 @@ public class OsActivity extends BaseActivity implements NavFragment.OnNavigation
 
     @Override
     public int getLayoutId() {
-        return 0;
+        return R.layout.osactivity_layout;
     }
 
     @Override
     public void init() {
 
-    }
-
-    @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.osactivity_layout);
-        ButterKnife.bind(this);
         FragmentManager manager = getSupportFragmentManager();
         mNavBar = ((NavFragment) manager.findFragmentById(R.id.fag_nav));
         mNavBar.setup(this, manager, R.id.main_container, this);

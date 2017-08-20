@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="QiHuTab">
+        <!--未选中的颜色-->
+        <attr name="normalTextColor" format="color" />
+        <!--选中的颜色-->
+        <attr name="selectedTextColor" format="color" />
+        <!--字体大小-->
+        <attr name="normalTextSize" format="dimension" />
+        <!--字体大小-->
+        <attr name="selectedTextSize" format="dimension" />
+        <!--文本-->
+        <attr name="normalText" format="string" />
+        <!--文本-->
+        <attr name="selectedText" format="string" />
+        <!--外圆颜色-->
+        <attr name="outCircleColor" format="color" />
+        <!--内圆颜色-->
+        <attr name="innerCircleColor" format="color" />
+        <!--动画时长-->
+        <attr name="animDuration" format="integer" />
+        <!--图片-->
+        <attr name="normalDrawableResId" format="reference" />
+        <!--图片-->
+        <attr name="selectedDrawableResId" format="reference" />
+        <attr name="type" format="enum">
+            <enum name="left" value="1" />
+            <enum name="center" value="0" />
+            <enum name="right" value="2" />
+        </attr>
+        <!--当前tab是否被选中-->
+        <attr name="isSelected" format="boolean" />
+        <!--未读通知的数量，当文字个数大于3，只保留前3个文字-->
+        <attr name="noticeCount" format="string" />
+
+        <!--未读通知的颜色-->
+        <attr name="noticeColor" format="color" />
+    </declare-styleable>
+
+</resources>

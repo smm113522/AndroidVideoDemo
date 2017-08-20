@@ -19,10 +19,10 @@
     <string name="toggle_badge">Toggle Badge</string>
     <string name="mode_fixed">MODE_FIXED</string>
 
-    <string name="main_tab_name_shouye">首页</string>
-    <string name="main_tab_name_xiangmu">项目</string>
-    <string name="main_tab_name_kehu">客户</string>
-    <string name="main_tab_name_news">信息</string>
+    <string name="main_tab_name_shouye">综合</string>
+    <string name="main_tab_name_xiangmu">动弹</string>
+    <string name="main_tab_name_kehu">单独</string>
+    <string name="main_tab_name_news">发现</string>
     <string name="main_tab_name_wode">我的</string>
 
 

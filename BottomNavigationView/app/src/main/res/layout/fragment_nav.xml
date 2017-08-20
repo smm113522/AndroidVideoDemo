@@ -22,13 +22,23 @@
         android:paddingLeft="12dp"
         android:paddingRight="12dp" />
 
-    <com.demo.smm.bottomnavigationview.osc.NavigationButton
+   <!-- <com.demo.smm.bottomnavigationview.osc.NavigationButton
         android:id="@+id/nav_item_ma"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:paddingLeft="12dp"
-        android:paddingRight="12dp" />
+        android:paddingRight="12dp" />-->
+    <ImageView
+        android:id="@+id/nav_item_tweet_pub"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:contentDescription="@null"
+        android:padding="2dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_nav_add_normal" />
 
     <com.demo.smm.bottomnavigationview.osc.NavigationButton
         android:id="@+id/nav_item_explore"

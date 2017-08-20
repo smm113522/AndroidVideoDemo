@@ -3,8 +3,21 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:id="@+id/menu_github"
-        android:title="title"
-        android:icon="@drawable/common_btn_wode_pr"
-        app:showAsAction="ifRoom" />
+        android:id="@+id/tab_add"
+        android:icon="@drawable/common_btn_shouye_pr"
+        android:title="add"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/add"
+        android:title="底部"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/delete"
+        android:title="第三方" />
+    <item
+        android:id="@+id/setting"
+        android:title="我"
+        app:showAsAction="never" />
+
 </menu>

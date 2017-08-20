@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/comom_toolbar"></include>
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/white"
+        app:tabBackground="@drawable/selected"
+        app:tabIndicatorColor="@color/blue_100"
+        app:tabIndicatorHeight="2dp"
+        app:tabMode="fixed"
+        app:tabSelectedTextColor="@color/white"
+        app:tabTextAppearance="@style/MyTabLayoutTextAppearance"
+        app:tabTextColor="#000" />
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tabLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/font_10"
+        android:background="@color/white"
+        app:tabIndicatorColor="@color/blue_100"
+        app:tabIndicatorHeight="2dp"
+        app:tabMode="scrollable"
+        app:tabSelectedTextColor="@color/colorPrimary"
+        app:tabTextColor="#000">
+
+    </android.support.design.widget.TabLayout>
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tabLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/font_10"
+        android:background="@color/white"
+        app:tabIndicatorColor="@color/blue_100"
+        app:tabIndicatorHeight="2dp"
+        app:tabMode="fixed"
+        app:tabSelectedTextColor="@color/colorPrimary"
+        app:tabTextColor="#000">
+
+        <android.support.design.widget.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="标签0" />
+
+        <android.support.design.widget.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:icon="@mipmap/ic_launcher" />
+
+        <android.support.design.widget.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="标签1" />
+
+        <android.support.design.widget.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="标签2" />
+
+
+    </android.support.design.widget.TabLayout>
+
+
+    <carbon.widget.Toolbar
+        android:id="@+id/toolbars"
+        style="@style/AppTheme.Toolbar"
+        android:layout_height="@dimen/carbon_toolbarHeight"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/font_10"
+        android:layout_marginTop="@dimen/font_10"
+        app:layout_scrollFlags="scroll|enterAlways"
+        android:gravity="center"
+        app:carbon_elevation="0dp">
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tabLayout3"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimary"
+            app:tabIndicatorColor="@color/teal_a700"
+            app:tabIndicatorHeight="2dp"
+            app:tabMode="fixed"
+            app:tabSelectedTextColor="@color/teal_a700"
+            app:tabTextColor="#000">
+
+
+        </android.support.design.widget.TabLayout>
+    </carbon.widget.Toolbar>
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbars1"
+        style="@style/AppTheme.Toolbar"
+        android:layout_height="@dimen/carbon_toolbarHeight"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/font_10"
+        android:layout_marginTop="@dimen/font_10"
+        android:gravity="center"
+        app:carbon_elevation="0dp">
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tabLayout4"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/carbon_toolbarHeight"
+            android:background="@color/colorPrimary"
+
+            app:tabIndicatorColor="@color/teal_a700"
+            app:tabIndicatorHeight="2dp"
+            app:tabMode="fixed"
+            app:tabSelectedTextColor="@color/teal_a700"
+            app:tabTextColor="#000">
+
+
+        </android.support.design.widget.TabLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <android.support.v7.widget.Toolbar
+        style="@style/AppTheme.Toolbar"
+        android:layout_height="@dimen/carbon_toolbarHeight"
+        android:layout_gravity="center"
+        app:title="@string/app_name"
+        app:theme="@style/OverFlowMenuTheme"
+        app:popupTheme="@style/AppTheme"
+        android:background="@color/blue"
+        app:layout_scrollFlags="scroll|enterAlways">
+
+
+
+
+    </android.support.v7.widget.Toolbar>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+</LinearLayout>

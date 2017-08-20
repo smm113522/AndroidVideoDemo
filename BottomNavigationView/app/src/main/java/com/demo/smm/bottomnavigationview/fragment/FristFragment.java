@@ -13,8 +13,18 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 
-import com.demo.smm.bottomnavigationview.AllBottonActivity;
 import com.demo.smm.bottomnavigationview.R;
+import com.demo.smm.bottomnavigationview.adapter.BaseRecyclerAdapter;
+import com.demo.smm.bottomnavigationview.adapter.SmartViewHolder;
+import com.demo.smm.bottomnavigationview.ui.bottonnavigation.BottomNavigationActivity;
+import com.demo.smm.bottomnavigationview.ui.other.OtherActivity;
+import com.demo.smm.bottomnavigationview.ui.radiogroup.FristButtonActivity;
+import com.demo.smm.bottomnavigationview.ui.radiogroup.TwoButtonActivity;
+import com.demo.smm.bottomnavigationview.ui.tabhost.TabHost1Activity;
+import com.demo.smm.bottomnavigationview.ui.tabhost.TabHost2Activity;
+import com.demo.smm.bottomnavigationview.ui.tabhost.TabHostActivity;
+import com.demo.smm.bottomnavigationview.ui.tablayout.TabLayout1Activity;
+import com.demo.smm.bottomnavigationview.ui.tablayout.TabLayoutActivity;
 import com.demo.smm.bottomnavigationview.utils.StatusBarUtil;
 
 import java.util.Arrays;
@@ -26,16 +36,18 @@ import static android.support.v7.widget.DividerItemDecoration.VERTICAL;
  * Created by Administrator on 2017/8/15 0015.
  */
 
-public class FristFragment extends Fragment {
+public class FristFragment extends Fragment implements AdapterView.OnItemClickListener {
 
     private enum Item {
-        Repast("餐饮美食-简单自定义Header-外边距magin", AllBottonActivity.class),
-        Profile("个人中心-PureScrollMode-纯滚动模式", AllBottonActivity.class),
-        Webview("网页引用-WebView", AllBottonActivity.class),
-        FeedList("微博列表-智能识别", AllBottonActivity.class),
-        Weibo("微博主页-CoordinatorLayout", AllBottonActivity.class),
-        Banner("滚动广告-Banner", AllBottonActivity.class),
-        QQBrowser("QQ浏览器-模拟QQ浏览器内核提示", AllBottonActivity.class),
+        RadioGroupRadioButton0("RadioGroup+RadioButton 组合产生底部", FristButtonActivity.class),
+        RadioGroupRadioButton1("这个加上viewPager", TwoButtonActivity.class),
+        TabHost0("TabHostActivity底部导航", TabHostActivity.class),
+        TabHost1("TabHost+viewpager", TabHost1Activity.class),
+        TabHost2("TabHost实现Tab切换", TabHost2Activity.class),
+        TabLayout("TabLayout基本使用", TabLayoutActivity.class),
+        TabLayout1("TabLayout 底部导航", TabLayout1Activity.class),
+        BottomNavigation("BottomNavigation 底部导航", BottomNavigationActivity.class),
+        BottomDaoHang("自定义 底部导航", OtherActivity.class),
         ;
         public String name;
         public Class<?> clazz;
@@ -44,6 +56,11 @@ public class FristFragment extends Fragment {
             this.clazz = clazz;
         }
 
+    }
+
+    public static FristFragment newInstance() {
+        FristFragment fragment = new FristFragment();
+        return fragment;
     }
 
     @Override
@@ -67,7 +84,7 @@ public class FristFragment extends Fragment {
                 protected void onBindViewHolder(SmartViewHolder holder, Item model, int position) {
                     holder.text(android.R.id.text1, model.name());
                     holder.text(android.R.id.text2, model.name);
-                    holder.textColorId(android.R.id.text2, R.color.colorTextAssistant);
+                    holder.textColorId(android.R.id.text2, R.color.colorAccent);
                 }
             });
         }

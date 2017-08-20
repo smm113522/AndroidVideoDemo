@@ -17,14 +17,24 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".JibenDemoActivity"></activity>
-        <activity android:name=".BottomNaviBarActivity"></activity>
-        <activity android:name=".AllBottonActivity"></activity>
-        <activity android:name=".FragmentDemoActivity"></activity>
-        <activity android:name=".FragmentViewpageDemoActivity"></activity>
-        <activity android:name=".FristButtonActivity"></activity>
+        <activity android:name=".ui.uithree.BottomNaviBarActivity"></activity>
+        <activity android:name=".ui.uithree.AllBottonActivity"></activity>
+        <activity android:name=".ui.tabhost.TabHostActivity"></activity>
+
+        <activity android:name=".ui.tabhost.TabHost1Activity"></activity>
+        <activity android:name=".ui.tabhost.TabHost2Activity"></activity>
+        <activity android:name=".ui.tablayout.TabLayoutActivity"></activity>
+        <activity android:name=".ui.tablayout.TabLayout1Activity"></activity>
+        <activity android:name=".ui.bottonnavigation.BottomNavigationActivity"></activity>
+        <activity android:name=".ui.other.OtherActivity"></activity>
+        <activity android:name=".ui.uithree.LuseenBottomNavigationActity"></activity>
+
+        <activity android:name=".ui.radiogroup.FristButtonActivity"></activity>
+        <activity android:name=".ui.radiogroup.TwoButtonActivity"></activity>
         <activity android:name=".osc.OsActivity"></activity>
-        <activity android:name=".BottomBarActivity"></activity>
+        <activity android:name=".ui.uithree.BottomBarActivity"></activity>
+        <activity android:name=".ui.uithree.QiHuTabLayoutActivity" />
+        <activity android:name=".ui.uithree.NavigationBottomDemoActivity"></activity>
     </application>
 
 </manifest>

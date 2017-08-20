@@ -39,5 +39,12 @@ dependencies {
     compile project(':bottom-bar')
 
     compile 'tk.zielony:carbon:0.14.0'
-    compile project(path: ':weblib')
+    compile 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.3'
+    compile 'q.rorbin:badgeview:1.1.0'
+
+    compile 'info.hoang8f:android-segmented:1.0.6'
+
+    compile 'com.github.armcha:LuseenBottomNavigation:1.8.2'
+
+    compile 'com.github.youngkaaa:navigation-bottom:1.0.0'
 }

@@ -1,1 +1,1 @@
-include ':app', ':bottom-bar', ':weblib'
+include ':app', ':bottom-bar'

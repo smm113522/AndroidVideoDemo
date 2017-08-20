@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:title="item1"
+        app:nb_tabActiveResId="@drawable/common_btn_wode_pr"
+        app:nb_tabInActiveResId="@drawable/common_btn_wode"
+        />
+    <item
+        android:title="item2"
+        app:nb_tabActiveResId="@drawable/common_btn_xinxi_pr"
+        app:nb_tabInActiveResId="@drawable/common_btn_xinxi" />
+
+    <item
+        android:title="item3"
+        app:nb_tabActiveResId="@drawable/common_btn_kehu_pr"
+        app:nb_tabInActiveResId="@drawable/common_btn_kehu" />
+
+    <item
+        android:title="item4"
+        app:nb_tabActiveResId="@drawable/common_btn_shouye_pr"
+        app:nb_tabInActiveResId="@drawable/common_btn_shouye" />
+
+    <item
+        android:title="item5"
+        app:nb_tabActiveResId="@drawable/common_btn_shouye_pr"
+        app:nb_tabInActiveResId="@drawable/common_btn_shouye" />
+</menu>
