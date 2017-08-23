@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <import type="com.demo.mvp.bean.Demo"/>
+        <import type="java.util.ArrayList" />
+        <import type="java.util.HashMap" />
+        <variable
+            name="demo"
+            type="Demo" />
+        <variable
+            name="index"
+            type="com.demo.mvp.IndexActivity" />
+        <variable
+            name="time"
+            type="java.util.Date" />
+        <variable
+            name="imageUrl"
+            type="String" />
+
+        <variable
+            name="error"
+            type="boolean"/>
+
+        <variable
+            name="age"
+            type="int" />
+
+    </data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/comon_tolbar"></include>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{demo.title}"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="点我"
+            android:onClick="DianWo"
+            />
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:image="@{imageUrl}"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{time}"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{String.valueOf(age)}" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text='@{error ? "error" : "ok"}' />
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/show_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="vertical" />
+
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+
+    </LinearLayout>
+</layout>
