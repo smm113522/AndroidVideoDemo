@@ -6,6 +6,8 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
+    <include layout="@layout/comon_tolbar"></include>
+
     <Button
         android:id="@+id/bt_login"
         android:layout_width="match_parent"
@@ -30,5 +32,12 @@
         android:layout_height="wrap_content"
         android:text="RxCache相关的" />
 
+    <Button
+        android:id="@+id/databinding"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="RxCache相关的" />
+
 
 </LinearLayout>
+
