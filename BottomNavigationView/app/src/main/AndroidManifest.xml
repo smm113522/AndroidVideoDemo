@@ -35,6 +35,7 @@
         <activity android:name=".ui.uithree.BottomBarActivity"></activity>
         <activity android:name=".ui.uithree.QiHuTabLayoutActivity" />
         <activity android:name=".ui.uithree.NavigationBottomDemoActivity"></activity>
+        <activity android:name=".ui.weixin.WeixinActivity"></activity>
     </application>
 
 </manifest>

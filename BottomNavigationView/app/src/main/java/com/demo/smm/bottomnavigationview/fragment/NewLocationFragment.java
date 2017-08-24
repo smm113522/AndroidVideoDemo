@@ -23,6 +23,7 @@ import com.demo.smm.bottomnavigationview.ui.uithree.BottomNaviBarActivity;
 import com.demo.smm.bottomnavigationview.ui.uithree.LuseenBottomNavigationActity;
 import com.demo.smm.bottomnavigationview.ui.uithree.NavigationBottomDemoActivity;
 import com.demo.smm.bottomnavigationview.ui.uithree.QiHuTabLayoutActivity;
+import com.demo.smm.bottomnavigationview.ui.weixin.WeixinActivity;
 import com.demo.smm.bottomnavigationview.utils.StatusBarUtil;
 
 import java.util.Arrays;
@@ -45,7 +46,8 @@ public class NewLocationFragment extends Fragment implements AdapterView.OnItemC
         LuseenBottomNavigation("BottomNavigationView Designed according Google guideLine", LuseenBottomNavigationActity.class),
         QiHuTabLayout("仿照360底部菜单", QiHuTabLayoutActivity.class),
         NavigationBottomDemo1("模仿知乎的底部导航栏", NavigationBottomDemoActivity.class),
-        TAB("一个简单的可自定义的 tab 导航控件", NavigationBottomDemoActivity.class),;
+        TAB("一个简单的可自定义的 tab 导航控件", NavigationBottomDemoActivity.class),
+        WEIXIN("仿照微信导航控件", WeixinActivity.class),;
         public String name;
         public Class<?> clazz;
 

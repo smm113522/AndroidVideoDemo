@@ -47,4 +47,5 @@ dependencies {
     compile 'com.github.armcha:LuseenBottomNavigation:1.8.2'
 
     compile 'com.github.youngkaaa:navigation-bottom:1.0.0'
+    compile project(path: ':alphaview')
 }
