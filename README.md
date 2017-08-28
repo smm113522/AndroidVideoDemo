@@ -39,4 +39,6 @@ Gen_Signature_Android2 签名
 
 ApkToolPlus_1.0  apk  反编译
 
-q
+CDemo  c + java 代码和使用，产生so 文件 
+
+CDemo_Ceshi  只有java 代码，使用so 文件 打包成jar或arr

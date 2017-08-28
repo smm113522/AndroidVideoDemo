@@ -8,35 +8,47 @@
 
     <include layout="@layout/comon_tolbar"></include>
 
-    <Button
-        android:id="@+id/bt_login"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="mvp 登录" />
+    <!--<Button-->
+        <!--android:id="@+id/bt_login"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="mvp 登录" />-->
 
-    <Button
-        android:id="@+id/rxjava"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="rxjava相关的" />
+    <!--<Button-->
+        <!--android:id="@+id/rxjava"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="rxjava相关的" />-->
 
-    <Button
-        android:id="@+id/Retrofit"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Retrofit相关的" />
+    <!--<Button-->
+        <!--android:id="@+id/Retrofit"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="Retrofit相关的" />-->
 
-    <Button
-        android:id="@+id/RxCache"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="RxCache相关的" />
+    <!--<Button-->
+        <!--android:id="@+id/RxCache"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="RxCache相关的" />-->
 
-    <Button
-        android:id="@+id/databinding"
+    <!--<Button-->
+        <!--android:id="@+id/databinding"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="RxCache相关的" />-->
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/refreshLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="RxCache相关的" />
+        android:layout_height="match_parent">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+            tools:listitem="@android:layout/simple_list_item_2"/>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
 
 
 </LinearLayout>
