@@ -42,3 +42,7 @@ ApkToolPlus_1.0  apk  反编译
 CDemo  c + java 代码和使用，产生so 文件 
 
 CDemo_Ceshi  只有java 代码，使用so 文件 打包成jar或arr
+
+Calander  日历demo ，主要是处理 原始 日历
+
+BleDemo-master  蓝牙开发，主要对接 物联网
