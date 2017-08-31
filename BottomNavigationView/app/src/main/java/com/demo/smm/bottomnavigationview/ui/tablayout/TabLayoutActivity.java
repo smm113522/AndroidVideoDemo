@@ -72,8 +72,6 @@ public class TabLayoutActivity extends BaseActivity {
         toolbars1.setOnMenuItemClickListener(onMenuItemClick);
 
         if (toolbars1!=null) {
-
-
             getSupportActionBar().setHomeButtonEnabled(true);
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         }

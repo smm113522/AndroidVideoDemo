@@ -19,7 +19,8 @@ import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.Toast;
 
-import com.iguxuan.R;
+import com.kesun.webview.BuildConfig;
+import com.kesun.webview.R;
 import com.iguxuan.utils.X5WebView;
 import com.tencent.smtt.export.external.interfaces.IX5WebChromeClient.CustomViewCallback;
 import com.tencent.smtt.export.external.interfaces.JsResult;
@@ -33,7 +34,7 @@ import com.tencent.smtt.sdk.WebView;
 import com.tencent.smtt.sdk.WebViewClient;
 import com.tencent.smtt.utils.TbsLog;
 
-public class BrowserActivity extends Activity {
+public class BrowserActivity extends BaseActivity {
     /**
      * 作为一个浏览器的示例展示出来，采用android+web的模式
      */
@@ -50,9 +51,11 @@ public class BrowserActivity extends Activity {
 
     private ValueCallback<Uri> uploadFile;
 
-//    private URL mIntentUrl;
+    //    private URL mIntentUrl;
     private static final int REQUEST_CODE_READ_EXTERNAL_STORAGE_PERMISSIONS = 1;
     private static final int REQUEST_CODE_WRITE_EXTERNAL_STORAGE = 2;
+
+    public static String titleName = "爱股轩";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -137,7 +140,7 @@ public class BrowserActivity extends Activity {
                 mTestHandler.sendEmptyMessageDelayed(MSG_OPEN_TEST_URL, 5000);// 5s?
                 if (Integer.parseInt(android.os.Build.VERSION.SDK) >= 16)
                     changGoForwardButton(view);
-				/* mWebView.showLog("test Log"); */
+                /* mWebView.showLog("test Log"); */
             }
         });
 

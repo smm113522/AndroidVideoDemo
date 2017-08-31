@@ -16,7 +16,7 @@ android {
     compileSdkVersion 25
     buildToolsVersion "25.0.2"
     defaultConfig {
-        applicationId "com.iguxuan"
+        applicationId "com.kesun.webview"
         minSdkVersion 14
         targetSdkVersion 25
         versionCode 212
@@ -28,8 +28,8 @@ android {
 
         buildConfigField "String","HTTPURL",'"http://wap.iguxuan.com/"'
 
-        resValue "string", "app_name", "爱股轩"
-        resValue "string", "PGYER_APPID", "7d238948f6bfe1a750ae2cac4881eab1"
+        resValue "string", "app_name", "webviewDemo"
+        resValue "string", "PGYER_APPID", ""
 
 
     }
@@ -61,5 +61,8 @@ dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     compile 'com.android.support:appcompat-v7:25.2.0'
     compile project(':pugongyinglib')
+    compile 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.3'
+
+    compile 'com.android.support:design:25.0.0'
 
 }

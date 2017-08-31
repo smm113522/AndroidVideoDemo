@@ -34,6 +34,21 @@
 
     </android.support.design.widget.TabLayout>
 
+   <!-- <android.support.design.widget.TabLayout
+        android:id="@+id/tabLayout11"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/font_10"
+        android:background="@color/white"
+        app:tabIndicatorColor="@color/blue_100"
+        app:tabIndicatorHeight="2dp"
+        app:tabIndicatorWith="2dp"
+        app:tabMode="fixed"
+        app:tabSelectedTextColor="@color/colorPrimary"
+        app:tabTextColor="#000">
+
+    </android.support.design.widget.TabLayout>-->
+
     <android.support.design.widget.TabLayout
         android:id="@+id/tabLayout2"
         android:layout_width="match_parent"
@@ -128,11 +143,9 @@
         app:title="@string/app_name"
         app:theme="@style/OverFlowMenuTheme"
         app:popupTheme="@style/AppTheme"
+        android:visibility="gone"
         android:background="@color/blue"
         app:layout_scrollFlags="scroll|enterAlways">
-
-
-
 
     </android.support.v7.widget.Toolbar>
 

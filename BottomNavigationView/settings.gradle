@@ -1,1 +1,1 @@
-include ':app', ':bottom-bar', ':alphaview'
+include ':app', ':bottom-bar', ':alphaview', ':viewpagerindicator_demo'

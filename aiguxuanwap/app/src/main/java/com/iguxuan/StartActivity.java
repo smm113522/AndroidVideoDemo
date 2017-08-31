@@ -3,16 +3,16 @@ package com.iguxuan;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
 import android.widget.ImageView;
 
-import com.iguxuan.R;
+import com.kesun.webview.ui.MainActivity;
+import com.kesun.webview.R;
 
 /**
  * Created by Administrator on 2017/3/27.
  */
 
-public class StartActivity extends AppCompatActivity {
+public class StartActivity extends BaseActivity {
 
 
     private Thread t1;
@@ -44,7 +44,7 @@ public class StartActivity extends AppCompatActivity {
      * 跳转到主界面
      */
     private void turnPage() {
-        Intent intent = new Intent(StartActivity.this, BrowserActivity.class);
+        Intent intent = new Intent(StartActivity.this, MainActivity.class);
         this.startActivity(intent);
         this.finish();
     }

@@ -1,0 +1,80 @@
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <Button
+            android:id="@+id/button0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:onClick="onClickBanner"
+            android:textColor="@color/tab_top2_text_1"
+            android:text="轮播Banner" />
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:onClick="onClickGuide"
+            android:textColor="@color/tab_top2_text_1"
+            android:text="引导界面(FixedIndicatorView)" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:onClick="onClickTabMain"
+            android:textColor="@color/tab_top2_text_1"
+            android:text="tab主界面(FixedIndicatorView)" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:textColor="@color/tab_top2_text_1"
+            android:onClick="onClickSlideTab"
+            android:text="可滑动tab界面(ScrollIndicatorView)" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:onClick="onClickSlideTab2"
+            android:textColor="@color/tab_top2_text_1"
+            android:text="可滑动tab界面(ScrollIndicatorView详细配置)" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:onClick="onClickSpringTab"
+            android:text="springtab界面(ScrollIndicatorView)" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:textColor="@color/tab_top2_text_1"
+            android:onClick="onClickYear"
+            android:text="无数tab的界面(RecyclerIndicatorView)" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:onClick="onClickTabs"
+            android:textColor="@color/tab_top2_text_1"
+            android:text="不集成ViewPager的Indicator使用方式" />
+    </LinearLayout>
+
+</merge>
