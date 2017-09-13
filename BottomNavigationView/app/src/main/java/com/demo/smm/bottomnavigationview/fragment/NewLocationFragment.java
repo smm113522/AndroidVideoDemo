@@ -13,6 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 
+import com.chaychan.bottombarlayout.TouMainActivity;
 import com.demo.smm.bottomnavigationview.R;
 import com.demo.smm.bottomnavigationview.adapter.BaseRecyclerAdapter;
 import com.demo.smm.bottomnavigationview.adapter.SmartViewHolder;
@@ -50,6 +51,7 @@ public class NewLocationFragment extends Fragment implements AdapterView.OnItemC
         TAB("一个简单的可自定义的 tab 导航控件", NavigationBottomDemoActivity.class),
         WEIXIN("仿照微信导航控件", WeixinActivity.class),
         XINLAN("仿照新浪地址", MainActivity.class),
+        KAIXI("仿照今日头条底部", TouMainActivity.class),
         ;
         public String name;
         public Class<?> clazz;
