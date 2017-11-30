@@ -78,3 +78,5 @@
 ##### [Android 高清加载巨图方案 拒绝压缩图片](http://blog.csdn.net/lmj623565791/article/details/49300989)
 ##### [Android 优化Bitmap避免OutOfMemoryError](http://chjmars.iteye.com/blog/1157137)\
 
+## glide 4.0 版本升级 注意事项
+
