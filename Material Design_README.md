@@ -89,7 +89,4 @@ Google I/O 2014 发布 [Material Design](http://www.google.com/design/spec/mater
 ## 离线版本
 
 目前，离线版本(PDF、ePub)可正常下载、使用。   
-
-需要说明的是文章中引用的大量的视频由于视频长度及排版技术原因暂时无法在离线文档中查看，我们对此带来的不便深感抱歉。   
-
-需要观看视频的同学可通过网页版查看。
+ https://juejin.im/post/5a43172751882512ae12ecc0?utm_source=gold_browser_extension
