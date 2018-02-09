@@ -1,5 +1,0 @@
-json 判断某字段是不存在
-
-org.json.JSONObject的!json.isNull("XXX")
-net.sf.json.JSONObject的json.containsKey("XXX")
-
