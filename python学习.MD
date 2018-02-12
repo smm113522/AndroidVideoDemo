@@ -1,34 +1,33 @@
-python Ñ§Ï°
+python å­¦ä¹ 
 
-##Ä¿Ç°½Ó´¥µ½ÖªÊ¶ÄÚÈİ
-##python»ù±¾Óï·¨
+##ç›®å‰æ¥è§¦åˆ°çŸ¥è¯†å†…å®¹
+
+##pythonåŸºæœ¬è¯­æ³•
 	
-##»ù±¾µÄÄÚÈİ
+##åŸºæœ¬çš„å†…å®¹
 	
 
-##Ó¦ÓÃ ÒÔ¼°demo
-	1.ÅÀ³æ µÄÊ¹ÓÃ
+##åº”ç”¨ ä»¥åŠdemo
+	1.çˆ¬è™« çš„ä½¿ç”¨
 
 
-##web ¿ò¼Ü
+##web æ¡†æ¶
 
-	1.flask ¹ÙÍø£¨http://flask.pocoo.org/£©
-		¼òÊéÀïÃæÈı²¿Çú£¨£©
+	1.flask å®˜ç½‘ï¼ˆhttp://flask.pocoo.org/ï¼‰
+		ç®€ä¹¦é‡Œé¢ä¸‰éƒ¨æ›²ï¼ˆï¼‰
 	2.
 	
-##¿ª·¢¹¤¾ß
+##å¼€å‘å·¥å…·
 	1.JetBrains PyCharm Community Edition 2016.3.2(64)
 	2.pyzo
 
 
-## °¸Àı
-²©¿Í
-https://github.com/anshengme/july	
+## æ¡ˆä¾‹
+åšå®¢
+
+https://blog.ansheng.me/
 	
 	
 	
 
-## php
-
-php bb  phpwind discuz 
-
+ 
