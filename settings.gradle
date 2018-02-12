@@ -1,1 +1,1 @@
-include ':app'
+include ':app', ':lib_common', ':module_main', ':module_FFmpeg', ':module_MediaCodec'
