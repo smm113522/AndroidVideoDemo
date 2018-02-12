@@ -17,6 +17,7 @@ http://www.hubwiz.com/course/5359f6f6ec7452081a7873d8/
 	1.爬虫
 	
 	
+	
 ## node web 应用
 	1.express 
 	   案例https://gold.xitu.io/entry/5884ee911b69e60058e283a0
@@ -178,7 +179,7 @@ https://github.com/jyy12/AcCms
 
 	5，async  
 	
-	6，
+	6，share.js/    http://overtrue.me/share.js/  分享功能
 ## node 推荐书籍
 
 	《九浅一深Node.js》
@@ -262,4 +263,32 @@ http://yrq110.me/
 
 ## 其他系统下的 node 安装和打包
 html5打包 webpack
+
+-----------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
