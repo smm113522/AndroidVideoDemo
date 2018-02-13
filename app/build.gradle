@@ -9,7 +9,7 @@ android {
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdk
         versionCode 1
-        versionName "1.0"
+        versionName "1.0.1"
         multiDexEnabled true
         javaCompileOptions {
             annotationProcessorOptions {
