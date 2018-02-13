@@ -1,8 +1,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.kesun.ffmpeg">
+
+    package="com.kesun.png">
 
     <application android:theme="@style/AppTheme">
-        <activity android:name=".FFmpegActivity"></activity>
+        <activity android:name=".AllpngActivity"></activity>
+
     </application>
 
 </manifest>
