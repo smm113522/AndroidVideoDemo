@@ -13,9 +13,11 @@
  ## FFmpeg 尝试
 
  1.window 上使用 FFmpeg
+
     工具下载和配置
     http://blog.csdn.net/yy3097/article/details/51063950
     完成。
+
  2, mac 上用Android Studio编译FFmpeg库并移植
  http://blog.csdn.net/hejjunlin/article/details/52661331
  下载FFmpeg 3.1.3
