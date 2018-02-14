@@ -15,14 +15,18 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
 
+import com.jia.jsplayer.danmu.DanmuView;
 import com.jia.jsplayer.listener.OnVideoControlListener;
 import com.jia.jsplayer.utils.DisplayUtils;
 import com.jia.jsplayer.video.JsPlayer;
+import com.kesun.main.adapter.MyDanmuAdapter;
+import com.kesun.main.bean.MyDanmuModel;
 import com.kesun.main.bean.VideoInfo;
 
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.InputStream;
+import java.util.Random;
 
 /**
  * Created by Administrator on 2018/2/14 0014.
@@ -63,8 +67,11 @@ public class DemoActivity extends AppCompatActivity implements View.OnClickListe
             }
         });
 
+        random = new Random();
         initPath();
-
+        mPlayer.setDanMuAdapter(new MyDanmuAdapter(this));
+        mPlayer.setDanMuGravity(3);
+        mPlayer.setDanMuSpeed(DanmuView.NORMAL_SPEED);
     }
 
     private void initView() {
@@ -91,11 +98,21 @@ public class DemoActivity extends AppCompatActivity implements View.OnClickListe
             mPlayer.startPlay();
         }
     }
+    public String DANMU[] = {"腌疙瘩，炸麻叶", "一种鸡蛋蒸虾酱", "鲜味妙不可言", "撒了芝麻的吊炉烧饼，焦香四溢", "西红柿鸡蛋面", "那浓郁深沉的酱油味仍然让我无比想念", "即使是二姨炒的土豆片", "蒸馍馍"};
 
+
+    Random random;
     @Override
     public void onClick(View v) {
         int i = v.getId();
         if (i == R.id.bt_open) {// TODO 18/02/14
+
+            MyDanmuModel danmuEntity = new MyDanmuModel();
+            danmuEntity.setContent(DANMU[random.nextInt(8)]);
+            danmuEntity.setType(random.nextInt(4));
+            danmuEntity.setGoodNum(random.nextInt(100) + 1);
+            danmuEntity.setGood(false);
+            mPlayer.addDanmu(danmuEntity);
 
         } else if (i == R.id.bt_close) {// TODO 18/02/14
 

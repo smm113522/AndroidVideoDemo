@@ -43,6 +43,7 @@ import com.jia.jsplayer.view.VideoBehaviorView;
  * Created by jia on 2017/9/2.
  */
 public class JsPlayer extends VideoBehaviorView {
+
     private static final String TAG = "JsPlayer";
     private SurfaceView surfaceView;
     private View loadingView;
