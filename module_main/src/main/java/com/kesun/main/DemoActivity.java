@@ -1,9 +1,14 @@
 package com.kesun.main;
 
+import android.content.ContentResolver;
 import android.content.Context;
+import android.content.Intent;
 import android.content.res.Configuration;
+import android.database.Cursor;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
+import android.provider.MediaStore;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -29,7 +34,6 @@ public class DemoActivity extends AppCompatActivity implements View.OnClickListe
     private Button mOpenBt;
     private Button mCloseBt;
     private String fileName = "video.mp4";
-//    private String path = "file:///android_asset/" + fileName;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -58,9 +62,9 @@ public class DemoActivity extends AppCompatActivity implements View.OnClickListe
 
             }
         });
-        mPlayer.setPath(new VideoInfo("艺术人生", getAssetsFils()));
 
-        mPlayer.startPlay();
+        initPath();
+
     }
 
     private void initView() {
@@ -69,6 +73,23 @@ public class DemoActivity extends AppCompatActivity implements View.OnClickListe
         mOpenBt.setOnClickListener(this);
         mCloseBt = (Button) findViewById(R.id.bt_close);
         mCloseBt.setOnClickListener(this);
+    }
+
+    public void initPath() {
+        String action = getIntent().getAction();
+//将文件复制到制定目录中
+        if (Intent.ACTION_VIEW.equals(action)) {
+            String str = getIntent().getDataString();
+//            Log.e("uri", str);
+            if (str != null) {
+                Uri uri = Uri.parse(str);//uri路径
+                mPlayer.setPath(new VideoInfo("艺术人生", getRealFilePath(getApplicationContext(), uri)));
+                mPlayer.startPlay();
+            }
+        } else {
+            mPlayer.setPath(new VideoInfo("艺术人生", getAssetsFils()));
+            mPlayer.startPlay();
+        }
     }
 
     @Override
@@ -93,7 +114,7 @@ public class DemoActivity extends AppCompatActivity implements View.OnClickListe
      * @return
      */
     public File getFileFromAssetsFile(String fileName) {//这种方式不能用，只能用于webview加载，直接取路径是不行的
-        String path = "file:///android_asset/" + fileName;
+
         String filepath = Environment.getExternalStorageDirectory().getPath() + "/"
 //                + getResources().getString(R.string.app_name) + "/"
                 + fileName;
@@ -174,6 +195,27 @@ public class DemoActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
 
-
+    public static String getRealFilePath(final Context context, final Uri uri) {
+        if (null == uri) return null;
+        final String scheme = uri.getScheme();
+        String data = null;
+        if (scheme == null)
+            data = uri.getPath();
+        else if (ContentResolver.SCHEME_FILE.equals(scheme)) {
+            data = uri.getPath();
+        } else if (ContentResolver.SCHEME_CONTENT.equals(scheme)) {
+            Cursor cursor = context.getContentResolver().query(uri, new String[]{MediaStore.Images.ImageColumns.DATA}, null, null, null);
+            if (null != cursor) {
+                if (cursor.moveToFirst()) {
+                    int index = cursor.getColumnIndex(MediaStore.Images.ImageColumns.DATA);
+                    if (index > -1) {
+                        data = cursor.getString(index);
+                    }
+                }
+                cursor.close();
+            }
+        }
+        return data;
+    }
 
 }
