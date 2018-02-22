@@ -38,6 +38,7 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
 
     private enum Item {
         BAN1("爱股轩官网", BrowserActivity.class),
+        BAN2("爱股轩官网", BrowserActivity.class),
         ;
         public String name;
         public Class<?> clazz;

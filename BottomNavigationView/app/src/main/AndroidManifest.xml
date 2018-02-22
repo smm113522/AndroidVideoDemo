@@ -3,6 +3,10 @@
     package="com.demo.smm.bottomnavigationview">
 
     <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.autofocus" />
 
     <application
         android:allowBackup="true"
@@ -36,6 +40,10 @@
         <activity android:name=".ui.uithree.QiHuTabLayoutActivity" />
         <activity android:name=".ui.uithree.NavigationBottomDemoActivity"></activity>
         <activity android:name=".ui.weixin.WeixinActivity"></activity>
+        <activity android:name=".ui.sos.SaoDemoActivity"></activity>
+        <activity android:name=".ui.tab.PagerSlidingTabStripActivity"></activity>
+        <activity android:name=".ui.sos.FlashActivity"></activity>
+
     </application>
 
 </manifest>

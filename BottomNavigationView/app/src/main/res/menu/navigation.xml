@@ -8,6 +8,11 @@
         android:id="@+id/delete"
         android:icon="@drawable/common_btn_xiangmu_pr"
         android:title="第三方" />
+
+    <item
+        android:id="@+id/tab"
+        android:icon="@drawable/common_btn_xiangmu_pr"
+        android:title="top_tab" />
     <item
         android:id="@+id/setting"
         android:icon="@drawable/common_btn_kehu_pr"

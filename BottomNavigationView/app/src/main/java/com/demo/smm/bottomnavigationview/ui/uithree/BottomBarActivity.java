@@ -66,6 +66,7 @@ public class BottomBarActivity extends BaseActivity {
         switch (position) {
             case 0://防止重复加载数据
 //                fragment = new ProjectFragment_();
+                bottomBar.getTabWithId(R.id.tabProject).setBadgeCount(20);
                 List<Fragment> fragments = getSupportFragmentManager().getFragments();
                 boolean containFragment = false;
                 if (fragments != null) {
@@ -89,7 +90,7 @@ public class BottomBarActivity extends BaseActivity {
                 break;
 
             case 3:
-//                bottomBar.getTabWithId(R.id.tabProject).setBadgeCount(300);
+                bottomBar.getTabWithId(R.id.tabProject).setBadgeCount(-1);
                 fragment = new NewLocationFragment();
                 break;
 

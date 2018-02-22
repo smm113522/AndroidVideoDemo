@@ -2,8 +2,8 @@ apply plugin: 'com.android.application'
 apply plugin: 'com.jakewharton.butterknife'
 
 android {
-    compileSdkVersion 25
-    buildToolsVersion "25.0.1"
+    compileSdkVersion 26
+    buildToolsVersion "26.0.2"
 
     dataBinding {
         enabled = true
@@ -11,8 +11,8 @@ android {
 
     defaultConfig {
         applicationId "com.demo.smm.bottomnavigationview"
-        minSdkVersion 19
-        targetSdkVersion 25
+        minSdkVersion 16
+        targetSdkVersion 26
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
@@ -27,15 +27,15 @@ android {
 
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
-    compile 'com.android.support:appcompat-v7:25.1.0'
-    compile 'com.android.support:design:25.1.0'
+    compile 'com.android.support:appcompat-v7:26+'
+    compile 'com.android.support:design:26+'
     /*懒人控件*/
     compile 'com.jakewharton:butterknife:8.5.1'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.5.1'
     /*bar*/
     compile 'com.ashokvarma.android:bottom-navigation-bar:1.3.0'
     compile 'com.balysv:material-ripple:1.0.2'
-    compile 'net.oschina.common:common:0.1.5'
+//    compile 'net.oschina.common:common:0.1.5'
     compile project(':bottom-bar')
     compile project(':viewpagerindicator_demo')
 
@@ -48,6 +48,10 @@ dependencies {
     compile 'com.github.armcha:LuseenBottomNavigation:1.8.2'
 
     compile 'com.github.youngkaaa:navigation-bottom:1.0.0'
+
     compile project(path: ':alphaview')
     compile project(path: ':bottombarlayout')
+/* tab */
+    compile 'com.astuetz:pagerslidingtabstrip:1.0.1'
+
 }

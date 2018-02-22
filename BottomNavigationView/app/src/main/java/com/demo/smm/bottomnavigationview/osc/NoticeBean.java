@@ -2,7 +2,6 @@ package com.demo.smm.bottomnavigationview.osc;
 
 import android.content.Context;
 
-import net.oschina.common.helper.SharedPreferencesHelper;
 
 import java.io.Serializable;
 
@@ -115,15 +114,15 @@ public class NoticeBean implements Serializable {
         return this;
     }
 
-    NoticeBean save(Context context) {
-        SharedPreferencesHelper.save(context, this);
-        return this;
-    }
-
-    static NoticeBean getInstance(Context context) {
-        NoticeBean bean = SharedPreferencesHelper.load(context, NoticeBean.class);
-        if (bean == null)
-            bean = new NoticeBean();
-        return bean;
-    }
+//    NoticeBean save(Context context) {
+//        SharedPreferencesHelper.save(context, this);
+//        return this;
+//    }
+//
+//    static NoticeBean getInstance(Context context) {
+//        NoticeBean bean = SharedPreferencesHelper.load(context, NoticeBean.class);
+//        if (bean == null)
+//            bean = new NoticeBean();
+//        return bean;
+//    }
 }

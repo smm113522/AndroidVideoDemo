@@ -13,7 +13,6 @@ import android.view.View;
 import com.demo.smm.bottomnavigationview.R;
 import com.demo.smm.bottomnavigationview.fragment.NewLocationFragment;
 
-import net.oschina.common.widget.drawable.shape.BorderShape;
 
 import java.util.List;
 
@@ -66,7 +65,6 @@ public class NavFragment extends BaseFragment implements View.OnClickListener{
         mNavTweet.init(R.drawable.tab_icon_tweet1,
                 R.string.main_tab_name_xiangmu,
                 NewLocationFragment.class);
-
 
         mNavExplore.init(R.drawable.tab_icon_explore1,
                 R.string.main_tab_name_news,
