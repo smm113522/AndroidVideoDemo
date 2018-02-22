@@ -17,6 +17,7 @@ public class AllpngActivity extends AppCompatActivity implements View.OnClickLis
 
     private Button mGridview;
     private Button mGallery;
+    private Button mRecyclerview;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -30,6 +31,8 @@ public class AllpngActivity extends AppCompatActivity implements View.OnClickLis
         mGridview.setOnClickListener(this);
         mGallery = (Button) findViewById(R.id.Gallery);
         mGallery.setOnClickListener(this);
+        mRecyclerview = (Button) findViewById(R.id.recyclerview);
+        mRecyclerview.setOnClickListener(this);
     }
 
     @Override
@@ -38,9 +41,12 @@ public class AllpngActivity extends AppCompatActivity implements View.OnClickLis
         if (i == R.id.gridview) {
             // TODO 18/02/22
             startActivity(new Intent(this, ImageCacheDemo.class));
-        }else if (i == R.id.Gallery) {
+        } else if (i == R.id.Gallery) {
             // TODO 18/02/22
             startActivity(new Intent(this, ImageSDCardCacheDemo.class));
+        } else if (i == R.id.recyclerview) {
+            // TODO 18/02/22
+            startActivity(new Intent(this, DemoActivity.class));
         } else {
         }
     }
