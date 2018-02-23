@@ -7,15 +7,13 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.view.View;
 import android.view.animation.AlphaAnimation;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
-import com.kesun.png.adapter.DemoAdapter;
-import com.kesun.png.utils.SpacesItemDecoration;
+import com.kesun.png.adapter.ViewPagerAdapter;
+import com.kesun.png.control.HackyViewPager;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -26,13 +24,14 @@ import cn.trinea.android.common.service.impl.ImageMemoryCache;
 import cn.trinea.android.common.service.impl.RemoveTypeLastUsedTimeFirst;
 
 /**
- * Created by Administrator on 2018/2/22 0022.
+ * Created by Administrator on 2018/2/23 0023.
  */
 
-public class DemoActivity extends AppCompatActivity {
+public class ImageDetailsActivity extends AppCompatActivity {
 
-    private RecyclerView mRecyclerview;
-    private DemoAdapter adapter;
+    private HackyViewPager mHackyviewpager;
+    private ArrayList<String> images;
+    private int index;
 
     public static final String TAG_CACHE = "image_cache";
     /**
@@ -45,20 +44,29 @@ public class DemoActivity extends AppCompatActivity {
             .append("AndroidDemo").append(File.separator)
             .append("ImageCache").toString();
 
-    public static void StartActivity(Activity activity, ArrayList<String> list) {
-        Intent intent = new Intent(activity, DemoActivity.class);
+    public static void StartActivity(Activity activity, ArrayList<String> list, int index) {
+        Intent intent = new Intent(activity, ImageDetailsActivity.class);
         intent.putStringArrayListExtra("list", list);
+        intent.putExtra("index", index);
         activity.startActivity(intent);
     }
 
-    private ArrayList<String> list;
+    public static void StartActivity(Activity activity, String url) {
+        Intent intent = new Intent(activity, ImageDetailsActivity.class);
+        ArrayList<String> list = new ArrayList<String>();
+        list.add(url);
+        intent.putStringArrayListExtra("list", list);
+        intent.putExtra("index", 0);
+        activity.startActivity(intent);
+    }
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_demo_list);
+        setContentView(R.layout.activity_details_image);
 
-        list = getIntent().getStringArrayListExtra("list");
+        images = getIntent().getStringArrayListExtra("list");
+        index = getIntent().getIntExtra("index", 0);
 
         IMAGE_CACHE.initData(getApplicationContext(), TAG_CACHE);
         IMAGE_CACHE.setContext(getApplicationContext());
@@ -66,39 +74,12 @@ public class DemoActivity extends AppCompatActivity {
 
         initView();
 
-        if (list != null) {
-            adapter.setList(list);
-        } else {
-            initImageUrlList();
-        }
-
-
+        mHackyviewpager.setAdapter(new ViewPagerAdapter(this, images,IMAGE_CACHE));
+        mHackyviewpager.setCurrentItem(index);
     }
 
     private void initView() {
-        mRecyclerview = (RecyclerView) findViewById(R.id.mrecyclerview);
-        mRecyclerview.setLayoutManager(new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL));
-        mRecyclerview.setAdapter(adapter = new DemoAdapter(this, IMAGE_CACHE));
-
-    }
-
-    private ArrayList<String> imageUrlList;
-
-    private void initImageUrlList() {
-        imageUrlList = new ArrayList<String>();
-        imageUrlList.add("http://farm8.staticflickr.com/7409/9148527822_36fa37d7ca_z.jpg");
-        imageUrlList.add("http://farm4.staticflickr.com/3755/9148527824_6c156185ea.jpg");
-        imageUrlList.add("http://farm8.staticflickr.com/7318/9148527808_e804baef0b.jpg");
-        imageUrlList.add("http://farm8.staticflickr.com/7318/9146300275_5fe995d123.jpg");
-        imageUrlList.add("http://farm8.staticflickr.com/7288/9146300469_bd3420c75b_z.jpg");
-        imageUrlList.add("http://farm8.staticflickr.com/7351/9148527976_8a4e75ae87.jpg");
-        imageUrlList.add("http://farm3.staticflickr.com/2888/9148527996_f05118d7de_o.jpg");
-        imageUrlList.add("http://farm3.staticflickr.com/2863/9148527892_31f9377351_o.jpg");
-        imageUrlList.add("http://farm8.staticflickr.com/7310/9148528008_8e8f51997a.jpg");
-        imageUrlList.add("http://farm3.staticflickr.com/2849/9148528108_dfcda19507.jpg");
-        imageUrlList.add("http://farm4.staticflickr.com/3739/9148528022_e9bf03058f.jpg");
-
-        adapter.setList(imageUrlList);
+        mHackyviewpager = (HackyViewPager) findViewById(R.id.hackyviewpager);
     }
 
     public static final ImageCache IMAGE_CACHE = new ImageCache(128, 512);
@@ -190,4 +171,5 @@ public class DemoActivity extends AppCompatActivity {
         IMAGE_CACHE.saveDataToDb(this, TAG_CACHE);
         super.onDestroy();
     }
+
 }

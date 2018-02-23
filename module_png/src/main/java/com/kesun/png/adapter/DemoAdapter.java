@@ -14,6 +14,7 @@ import android.view.animation.AlphaAnimation;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
+import com.kesun.png.ImageDetailsActivity;
 import com.kesun.png.R;
 
 import java.io.File;
@@ -59,7 +60,7 @@ public class DemoAdapter extends RecyclerView.Adapter<DemoAdapter.ViewHolder> {
     }
 
     @Override
-    public void onBindViewHolder(ViewHolder holder, int position) {
+    public void onBindViewHolder(ViewHolder holder, final int position) {
         int viewId = 0x7F24FFF0;
         int verticalSpacing, horizontalSpacing;
         verticalSpacing = horizontalSpacing = context.getResources().getDimensionPixelSize(R.dimen.dp_4);
@@ -84,6 +85,12 @@ public class DemoAdapter extends RecyclerView.Adapter<DemoAdapter.ViewHolder> {
         layoutParams.height = IMAGEVIEW_DEFAULT_HEIGHT;
         // get image
         IMAGE_CACHE.get(list.get(position), holder.imageView);
+        holder.imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ImageDetailsActivity.StartActivity((Activity) context,list,position);
+            }
+        });
     }
 
     @Override

@@ -1,39 +1,51 @@
 package com.kesun.png;
 
-import android.app.Activity;
-import android.content.Intent;
 import android.graphics.Bitmap;
+import android.inputmethodservice.ExtractEditText;
 import android.os.Bundle;
 import android.os.Environment;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
+import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.view.animation.AlphaAnimation;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
+import android.widget.Toast;
 
 import com.kesun.png.adapter.DemoAdapter;
-import com.kesun.png.utils.SpacesItemDecoration;
+import com.kesun.png.utils.GetImagePathUtil;
 
 import java.io.File;
 import java.util.ArrayList;
+import java.util.Date;
 
 import cn.trinea.android.common.entity.FailedReason;
+import cn.trinea.android.common.entity.HttpResponse;
+import cn.trinea.android.common.service.HttpCache;
 import cn.trinea.android.common.service.impl.ImageCache;
 import cn.trinea.android.common.service.impl.ImageMemoryCache;
 import cn.trinea.android.common.service.impl.RemoveTypeLastUsedTimeFirst;
+import cn.trinea.android.common.util.CacheManager;
 
 /**
- * Created by Administrator on 2018/2/22 0022.
+ * Created by Administrator on 2018/2/23 0023.
  */
 
-public class DemoActivity extends AppCompatActivity {
+public class AllDemoActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private RecyclerView mRecyclerview;
+    private EditText mQueryEdit;
+    private Button mJiexiBt;
+    private RecyclerView mMrecyclerview;
+
     private DemoAdapter adapter;
 
+    private HttpCache httpCache;
     public static final String TAG_CACHE = "image_cache";
     /**
      * cache folder path which be used when saving images
@@ -45,61 +57,80 @@ public class DemoActivity extends AppCompatActivity {
             .append("AndroidDemo").append(File.separator)
             .append("ImageCache").toString();
 
-    public static void StartActivity(Activity activity, ArrayList<String> list) {
-        Intent intent = new Intent(activity, DemoActivity.class);
-        intent.putStringArrayListExtra("list", list);
-        activity.startActivity(intent);
-    }
-
-    private ArrayList<String> list;
-
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_demo_list);
+        setContentView(R.layout.activity_all);
 
-        list = getIntent().getStringArrayListExtra("list");
+        httpCache = CacheManager.getHttpCache(getApplicationContext());
+
+        initView();
 
         IMAGE_CACHE.initData(getApplicationContext(), TAG_CACHE);
         IMAGE_CACHE.setContext(getApplicationContext());
         IMAGE_CACHE.setCacheFolder(DEFAULT_CACHE_FOLDER);
 
-        initView();
-
-        if (list != null) {
-            adapter.setList(list);
-        } else {
-            initImageUrlList();
-        }
-
-
     }
 
     private void initView() {
-        mRecyclerview = (RecyclerView) findViewById(R.id.mrecyclerview);
-        mRecyclerview.setLayoutManager(new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL));
-        mRecyclerview.setAdapter(adapter = new DemoAdapter(this, IMAGE_CACHE));
+        mQueryEdit = (EditText) findViewById(R.id.edit_query);
+        mJiexiBt = (Button) findViewById(R.id.bt_jiexi);
+        mJiexiBt.setOnClickListener(this);
+        mMrecyclerview = (RecyclerView) findViewById(R.id.mrecyclerview);
 
+        mMrecyclerview.setLayoutManager(new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL));
+        mMrecyclerview.setAdapter(adapter = new DemoAdapter(this, IMAGE_CACHE));
     }
 
-    private ArrayList<String> imageUrlList;
-
-    private void initImageUrlList() {
-        imageUrlList = new ArrayList<String>();
-        imageUrlList.add("http://farm8.staticflickr.com/7409/9148527822_36fa37d7ca_z.jpg");
-        imageUrlList.add("http://farm4.staticflickr.com/3755/9148527824_6c156185ea.jpg");
-        imageUrlList.add("http://farm8.staticflickr.com/7318/9148527808_e804baef0b.jpg");
-        imageUrlList.add("http://farm8.staticflickr.com/7318/9146300275_5fe995d123.jpg");
-        imageUrlList.add("http://farm8.staticflickr.com/7288/9146300469_bd3420c75b_z.jpg");
-        imageUrlList.add("http://farm8.staticflickr.com/7351/9148527976_8a4e75ae87.jpg");
-        imageUrlList.add("http://farm3.staticflickr.com/2888/9148527996_f05118d7de_o.jpg");
-        imageUrlList.add("http://farm3.staticflickr.com/2863/9148527892_31f9377351_o.jpg");
-        imageUrlList.add("http://farm8.staticflickr.com/7310/9148528008_8e8f51997a.jpg");
-        imageUrlList.add("http://farm3.staticflickr.com/2849/9148528108_dfcda19507.jpg");
-        imageUrlList.add("http://farm4.staticflickr.com/3739/9148528022_e9bf03058f.jpg");
-
-        adapter.setList(imageUrlList);
+    @Override
+    public void onClick(View v) {
+        int i = v.getId();
+        if (i == R.id.bt_jiexi) {// TODO 18/02/23
+            setmGetHtml();
+        }
     }
+
+    String url;
+
+    public void setmGetHtml() {
+        String eturl = mQueryEdit.getText().toString().trim();
+        if (TextUtils.isEmpty(eturl)) {
+            url = "http://p.codekk.com/detail/Android/zeleven/mua";
+        } else {
+            url = eturl;
+        }
+
+        httpCache.httpGet(url, new HttpCache.HttpCacheListener() {
+
+            protected void onPreGet() {
+
+            }
+
+            protected void onPostGet(HttpResponse httpResponse, boolean isInCache) {
+                if (httpResponse != null) {
+                    StringBuilder sb = new StringBuilder(256);
+                    sb.append("is in cache: ").append(isInCache).append("\r\n");
+                    if (isInCache) {
+                        sb.append("expires: ").append(new Date(httpResponse.getExpiredTime()).toGMTString())
+                                .append("\r\n");
+                    }
+
+                    Log.d("smm", sb.toString());
+                    Log.d("smm", httpResponse.getResponseBody());
+                    String content = httpResponse.getResponseBody();
+
+                    ArrayList list = GetImagePathUtil.getImgList(content);
+                    Log.d("smm", list.toString());
+                    adapter.setList(list);
+                } else {
+                    Toast.makeText(getApplicationContext(),"没有获取",Toast.LENGTH_SHORT).show();
+                    Log.d("smm", "null");
+                }
+
+            }
+        });
+    }
+
 
     public static final ImageCache IMAGE_CACHE = new ImageCache(128, 512);
 

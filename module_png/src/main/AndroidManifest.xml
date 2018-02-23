@@ -9,6 +9,8 @@
         <activity android:name=".ImageCacheDemo"></activity>
         <activity android:name=".ImageSDCardCacheDemo"></activity>
         <activity android:name=".DemoActivity"></activity>
+        <activity android:name=".ImageDetailsActivity"></activity>
+        <activity android:name=".AllDemoActivity"></activity>
 
     </application>
 
