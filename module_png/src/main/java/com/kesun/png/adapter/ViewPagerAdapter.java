@@ -1,12 +1,15 @@
 package com.kesun.png.adapter;
 
 import android.app.Activity;
+import android.app.DownloadManager;
 import android.content.Context;
+import android.net.Uri;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.view.Display;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -18,6 +21,9 @@ import com.kesun.png.R;
 import java.util.ArrayList;
 
 import cn.trinea.android.common.service.impl.ImageCache;
+import cn.trinea.android.common.util.DownloadManagerPro;
+
+import static android.content.Context.DOWNLOAD_SERVICE;
 
 /**
  * Created by Administrator on 2018/2/23 0023.
@@ -28,29 +34,32 @@ public class ViewPagerAdapter extends PagerAdapter {
     private Context context;
     private ArrayList<String> list;
     private ImageCache imageCache;
-
+    private DownloadManager downloadManager ;
     public ViewPagerAdapter(Context applicationContext, ArrayList<String> images, ImageCache imageCache) {
         this.context = applicationContext;
         this.list = images;
         this.imageCache = imageCache;
+        downloadManager = (DownloadManager)context.getSystemService(DOWNLOAD_SERVICE);
     }
 
     @Override
     public int getCount() {
-        return list == null?0: list.size();
+        return list == null ? 0 : list.size();
     }
 
     @Override
     public boolean isViewFromObject(View view, Object object) {
         return view == object;
     }
+
     private static final int IMAGEVIEW_DEFAULT_HEIGHT = 400;
     /**
      * column number
      **/
     public static final int COLUMNS = 1;
+
     @Override
-    public Object instantiateItem(ViewGroup container, int position) {
+    public Object instantiateItem(ViewGroup container, final int position) {
         View view = View.inflate(context, R.layout.view_pager_item, null);
         PhotoView photoView = (PhotoView) view.findViewById(R.id.photoview);
         TextView indicator = (TextView) view.findViewById(R.id.indicator);
@@ -82,11 +91,21 @@ public class ViewPagerAdapter extends PagerAdapter {
         photoView.setScaleType(ImageView.ScaleType.FIT_XY);
         // get image
 
-        imageCache.get(list.get(position),photoView);
+        imageCache.get(list.get(position), photoView);
         CharSequence text = context.getString(R.string.viewpager_indicator, position + 1, list.size());
         //设置indicator
         indicator.setText(text);
-        container.addView(view, ViewPager.LayoutParams.MATCH_PARENT, ViewPager.LayoutParams.MATCH_PARENT);
+
+        Button bt_down = (Button) view.findViewById(R.id.bt_down);
+        bt_down.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
+        container.addView(view, ViewPager.LayoutParams.MATCH_PARENT, ViewPager.LayoutParams.WRAP_CONTENT);
+
         return view;
     }
 
