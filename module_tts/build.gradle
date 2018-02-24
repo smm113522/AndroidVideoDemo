@@ -1,16 +1,16 @@
-apply plugin: 'com.android.application'
+apply plugin: 'com.android.library'
 
 android {
     compileSdkVersion compileSdk
     buildToolsVersion buildTools
-
     defaultConfig {
-        applicationId "com.kesun.video"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdk
         versionCode 1
-        versionName "1.0.1"
-        multiDexEnabled true
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        //ARouter
         javaCompileOptions {
             annotationProcessorOptions {
                 arguments = [moduleName: project.getName()]
@@ -32,10 +32,7 @@ android {
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile project(':module_main')
-    compile project(':module_FFmpeg')
-    compile project(':module_MediaCodec')
-    compile project(':module_ijkplayer')
-    compile project(':module_png')
-    compile project(':module_tts')
+    annotationProcessor "com.alibaba:arouter-compiler:$rootProject.annotationProcessor"
+    compile project(':lib_common')
+    compile 'com.github.chrisbanes:PhotoView:2.1.3'
 }

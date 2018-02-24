@@ -1,6 +1,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-
     package="com.kesun.mediacodec">
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
 
     <application android:theme="@style/AppTheme">
         <activity android:name=".MediaCodecActivity"></activity>

@@ -12,6 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.AlphaAnimation;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 
 import com.kesun.png.ImageDetailsActivity;
@@ -60,7 +61,7 @@ public class DemoAdapter extends RecyclerView.Adapter<DemoAdapter.ViewHolder> {
     }
 
     @Override
-    public void onBindViewHolder(ViewHolder holder, final int position) {
+    public void onBindViewHolder(final ViewHolder holder, final int position) {
         int viewId = 0x7F24FFF0;
         int verticalSpacing, horizontalSpacing;
         verticalSpacing = horizontalSpacing = context.getResources().getDimensionPixelSize(R.dimen.dp_4);
@@ -88,7 +89,7 @@ public class DemoAdapter extends RecyclerView.Adapter<DemoAdapter.ViewHolder> {
         holder.imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ImageDetailsActivity.StartActivity((Activity) context,list,position);
+                ImageDetailsActivity.StartActivity((Activity) context, list, position);
             }
         });
     }
@@ -98,13 +99,20 @@ public class DemoAdapter extends RecyclerView.Adapter<DemoAdapter.ViewHolder> {
         return list == null ? 0 : list.size();
     }
 
+    public static AlphaAnimation getInAlphaAnimation(long durationMillis) {
+        AlphaAnimation inAlphaAnimation = new AlphaAnimation(0, 1);
+        inAlphaAnimation.setDuration(durationMillis);
+        return inAlphaAnimation;
+    }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         ImageView imageView;
+        ProgressBar progressbar;
 
         public ViewHolder(View itemView) {
             super(itemView);
             imageView = (ImageView) itemView.findViewById(R.id.image_list_image);
+            progressbar = (ProgressBar) itemView.findViewById(R.id.progressbar);
         }
     }
 

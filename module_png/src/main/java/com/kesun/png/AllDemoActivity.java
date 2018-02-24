@@ -123,7 +123,7 @@ public class AllDemoActivity extends AppCompatActivity implements View.OnClickLi
                     Log.d("smm", list.toString());
                     adapter.setList(list);
                 } else {
-                    Toast.makeText(getApplicationContext(),"没有获取",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "没有获取", Toast.LENGTH_SHORT).show();
                     Log.d("smm", "null");
                 }
 
@@ -158,7 +158,8 @@ public class AllDemoActivity extends AppCompatActivity implements View.OnClickLi
 
                     // auto set height accroding to rate between height and weight
                     RelativeLayout.LayoutParams imageParams = (RelativeLayout.LayoutParams) imageView.getLayoutParams();
-                    imageParams.height = imageParams.width * loadedImage.getHeight() / loadedImage.getWidth();
+                    imageParams.height = loadedImage.getHeight();
+//                    imageParams.height = imageParams.width * loadedImage.getHeight() / loadedImage.getWidth();
                     imageView.setScaleType(ImageView.ScaleType.FIT_XY);
                 }
             }

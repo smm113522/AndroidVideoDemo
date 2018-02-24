@@ -43,6 +43,9 @@ http://blog.csdn.net/ywl5320/article/details/75040724
  ## 其他篇 SurfaceView+MediaPlayer封装JsPlayer
  https://juejin.im/post/5a76689df265da4e853d3039
  
+ ## tts 语音 方面
+ http://blog.csdn.net/sinat_35159441/article/details/68221129
+ 
  
 
  
