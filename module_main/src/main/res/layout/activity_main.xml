@@ -4,40 +4,64 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <Button
-        android:id="@+id/bt_ffmpeg"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:text="FFmpeg" />
+        android:layout_height="match_parent"
+        android:scrollbars="none" >
 
-    <Button
-        android:id="@+id/bt_ijk"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:text="ijkplayer" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-    <Button
-        android:id="@+id/bt_media"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:text="media" />
+            <Button
+                android:id="@+id/bt_ffmpeg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="FFmpeg" />
 
-    <Button
-        android:id="@+id/bt_png"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:text="图片处理" />
+            <Button
+                android:id="@+id/bt_ijk"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:text="ijkplayer" />
 
-    <Button
-        android:id="@+id/bt_other"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:text="视频播放" />
+            <Button
+                android:id="@+id/bt_media"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="media" />
+
+            <Button
+                android:id="@+id/bt_png"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:text="图片处理" />
+
+            <Button
+                android:id="@+id/bt_tts"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:text="语音处理" />
+
+            <Button
+                android:id="@+id/bt_other"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="视频播放" />
 
 
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>

@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button mMediaBt;
     private Button mPngBt;
     private Button mOtherBt;
+    private Button mTtsBt;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -47,6 +48,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mPngBt.setOnClickListener(this);
         mOtherBt = (Button) findViewById(R.id.bt_other);
         mOtherBt.setOnClickListener(this);
+        mTtsBt = (Button) findViewById(R.id.bt_tts);
+        mTtsBt.setOnClickListener(this);
     }
 
     @Override
@@ -60,8 +63,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             ARouter.getInstance().build("/media/mian").navigation();
         } else if (i == R.id.bt_png) {// TODO 18/02/13
             ARouter.getInstance().build("/png/mian").navigation();
-        }else if (i == R.id.bt_other) {// TODO 18/02/13
-            startActivity(new Intent(MainActivity.this,DemoActivity.class));
+        } else if (i == R.id.bt_tts) {// TODO 18/02/13
+            ARouter.getInstance().build("/tts/mian").navigation();
+        } else if (i == R.id.bt_other) {// TODO 18/02/13
+            startActivity(new Intent(MainActivity.this, DemoActivity.class));
         }
     }
 

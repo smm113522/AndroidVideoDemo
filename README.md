@@ -39,6 +39,11 @@ http://blog.csdn.net/ywl5320/article/details/75040724
 进行重新创建demo ，后台打包成jar包来为项目使用。
 
 
+## ijkplayer
+
+https://www.jianshu.com/p/9fe377dd9750
+
+
 
  ## 其他篇 SurfaceView+MediaPlayer封装JsPlayer
  https://juejin.im/post/5a76689df265da4e853d3039
@@ -46,7 +51,12 @@ http://blog.csdn.net/ywl5320/article/details/75040724
  ## tts 语音 方面
  http://blog.csdn.net/sinat_35159441/article/details/68221129
  
- 
+ ## 抓取包
+ https://sv.baidu.com
+ tab
+ list
+ vid
+ https://sv.baidu.com/sv?source=share-h5&pd=minishare&vid=8163008920202359258
 
  
  

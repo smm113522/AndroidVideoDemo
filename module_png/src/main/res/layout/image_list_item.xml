@@ -9,6 +9,7 @@
         android:layout_width="@dimen/image_width"
         android:layout_height="@dimen/image_height"
         android:layout_centerInParent="true"
+        android:scaleType="fitXY"
          />
 
     <ProgressBar

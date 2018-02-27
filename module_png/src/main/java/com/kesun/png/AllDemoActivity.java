@@ -121,6 +121,7 @@ public class AllDemoActivity extends AppCompatActivity implements View.OnClickLi
 
                     ArrayList list = GetImagePathUtil.getImgList(content);
                     Log.d("smm", list.toString());
+                    Toast.makeText(getApplicationContext(), list.toString(), Toast.LENGTH_SHORT).show();
                     adapter.setList(list);
                 } else {
                     Toast.makeText(getApplicationContext(), "没有获取", Toast.LENGTH_SHORT).show();

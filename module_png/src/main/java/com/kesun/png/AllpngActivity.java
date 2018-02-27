@@ -32,6 +32,7 @@ public class AllpngActivity extends AppCompatActivity implements View.OnClickLis
     private HttpCache httpCache;
     private TextView mContent;
     private Button mGetdemo;
+    private Button mGettabdemo;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -55,6 +56,8 @@ public class AllpngActivity extends AppCompatActivity implements View.OnClickLis
         mContent.setOnClickListener(this);
         mGetdemo = (Button) findViewById(R.id.getdemo);
         mGetdemo.setOnClickListener(this);
+        mGettabdemo = (Button) findViewById(R.id.gettabdemo);
+        mGettabdemo.setOnClickListener(this);
     }
 
     @Override
@@ -74,6 +77,8 @@ public class AllpngActivity extends AppCompatActivity implements View.OnClickLis
             setmGetHtml();
         } else if (i == R.id.getdemo) {
             startActivity(new Intent(this, AllDemoActivity.class));
+        } else if (i == R.id.gettabdemo) {
+            startActivity(new Intent(this, TabDemoActivity.class));
         } else if (i == R.id.content) {
             // TODO 18/02/22
             DemoActivity.StartActivity(this, list1);

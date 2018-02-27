@@ -46,6 +46,15 @@
                 android:text="获取html 案例" />
 
             <Button
+                android:id="@+id/gettabdemo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="5dp"
+                android:text="tab 案例" />
+
+            <Button
                 android:id="@+id/getHtml"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

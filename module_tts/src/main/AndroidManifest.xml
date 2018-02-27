@@ -2,9 +2,8 @@
 
     package="com.kesun.tts">
 
-    <application android:allowBackup="true" android:label="@string/app_name"
-        android:supportsRtl="true">
-
+    <application android:theme="@style/AppTheme">
+        <activity android:name=".TtsDemoActivity"></activity>
     </application>
 
 </manifest>
