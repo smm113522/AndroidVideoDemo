@@ -38,6 +38,7 @@ http://blog.csdn.net/ywl5320/article/details/75040724
 
 进行重新创建demo ，后台打包成jar包来为项目使用。
 
+https://github.com/wanliyang1990/wlplayer
 
 ## ijkplayer
 
@@ -58,6 +59,8 @@ https://www.jianshu.com/p/9fe377dd9750
  vid
  https://sv.baidu.com/sv?source=share-h5&pd=minishare&vid=8163008920202359258
 
+## 自然语言 HandLP
+https://github.com/hankcs/HanLP
  
  
  [▲ 回到顶部](#top)
