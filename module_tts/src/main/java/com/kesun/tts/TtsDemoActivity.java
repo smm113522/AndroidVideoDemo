@@ -1,20 +1,30 @@
 package com.kesun.tts;
 
+import android.Manifest;
+import android.content.res.AssetFileDescriptor;
+import android.media.MediaPlayer;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Environment;
 import android.speech.tts.TextToSpeech;
 import android.support.annotation.Nullable;
 import android.support.annotation.RequiresApi;
+import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
+import android.util.Log;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
-import com.hankcs.hanlp.HanLP;
-import com.hankcs.hanlp.tokenizer.BasicTokenizer;
+import com.mogujie.tt.VoiceRecorderHelper;
+import com.wulee.text2speachlib.Text2Speech;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.Locale;
 
 /**
@@ -26,13 +36,28 @@ public class TtsDemoActivity extends AppCompatActivity implements View.OnClickLi
 
     private EditText mReadtxtEt;
     private Button mReadBt;
+    private Button bt_tts_read;
     TextToSpeech tts;
     int result;
+    private Button mReadLBt;
+    private Button mReadBBt;
+    private VoiceRecorderHelper voiceRecorderHelper;
+    private String path;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tts_demo);
+
+        ActivityCompat.requestPermissions(
+                this,
+                new String[]{
+                        Manifest.permission.WRITE_EXTERNAL_STORAGE,
+                        Manifest.permission.READ_EXTERNAL_STORAGE,
+                        Manifest.permission.RECORD_AUDIO
+                },
+                1
+        );
 
         tts = new TextToSpeech(this, new TextToSpeech.OnInitListener() {
             @Override
@@ -44,24 +69,128 @@ public class TtsDemoActivity extends AppCompatActivity implements View.OnClickLi
             }
         });
 
+        voiceRecorderHelper =
+                new VoiceRecorderHelper(
+                        this,
+                        new VoiceRecorderHelper.CallBack() {
+                            @Override
+                            public String setOutPutPath() {
+                                /** 设置录音结果路径，你的格式也在这里设置 */
+                                return getAudioSavePath("LinGuanHong");
+                            }
+
+                            @Override
+                            public void onDown(View v) {
+                                /** 纯粹的 down 事件回调 */
+                            }
+
+                            @Override
+                            public void onMove_in_limit(View v) {
+                                /** 手指移动的范围在限制内 */
+                            }
+
+                            @Override
+                            public void onMove_out_limit(View v) {
+                                /** 手指移动超过范围，内部做了显示取消的提示 */
+                            }
+
+                            @Override
+                            public void onUp_start(View v) {
+                                /** 纯粹的 Up 事件回调 */
+                            }
+
+                            @Override
+                            public void onUp_cancel(View v) {
+                                /** 这个时候已经因为手指移动超过范围取消了录音 */
+                            }
+
+                            @Override
+                            public void onFinishRecord() {
+                                /** 录音结束 */
+                            }
+
+                            @Override
+                            public void onRecordSuccess(float len, String savePath) {
+                                /** 录音解码并且保存成功 */
+                                path = savePath;
+                                try {
+                                    File file = new File(path);
+                                    mediaPlayer.setDataSource(file.getPath());//指定音频文件路径
+                                    mediaPlayer.setLooping(true);//设置为循环播放
+                                    mediaPlayer.prepare();//初始化播放器MediaPlayer
+
+                                } catch (Exception e) {
+                                    e.printStackTrace();
+                                }
+                                Toast.makeText(getApplicationContext(), "添加完成", Toast.LENGTH_SHORT).show();
+                                Log.e("aaaaa", "录音的路径 " + savePath + " 长度 " + len);
+                            }
+
+                            @Override
+                            public void onRecordVolumeChange(int voiceValue) {
+                                /** 录音声音强度的变化，单位分贝 */
+                            }
+                        }
+                );
+
         initView();
     }
+
 
     private void initView() {
         mReadtxtEt = (EditText) findViewById(R.id.et_readtxt);
         mReadBt = (Button) findViewById(R.id.bt_read);
         mReadBt.setOnClickListener(this);
+        bt_tts_read = (Button) findViewById(R.id.bt_tts_read);
+        bt_tts_read.setOnClickListener(this);
+        mReadLBt = (Button) findViewById(R.id.bt_read_l);
+//        mReadLBt.setOnClickListener(this);
+
+        mReadLBt.setOnTouchListener(
+                new View.OnTouchListener() {
+                    @Override
+                    public boolean onTouch(View v, MotionEvent motionEvent) {
+                        switch (motionEvent.getAction()) {
+                            case MotionEvent.ACTION_DOWN:
+                                voiceRecorderHelper.Action_Down(v, motionEvent);
+                                return true;
+                            case MotionEvent.ACTION_MOVE:
+                                voiceRecorderHelper.Action_Move(v, motionEvent);
+                                return true;
+                            case MotionEvent.ACTION_UP:
+                                voiceRecorderHelper.Action_Up(v, motionEvent);
+                                return true;
+                        }
+                        return false;
+                    }
+                }
+        );
+
+
+        mReadBBt = (Button) findViewById(R.id.bt_read_b);
+        mReadBBt.setOnClickListener(this);
     }
+
+    private MediaPlayer mediaPlayer = new MediaPlayer();
 
     @Override
     public void onClick(View v) {
         int i1 = v.getId();
-        if (i1 == R.id.bt_read) {// TODO 18/02/24
+        if (i1 == R.id.bt_read) {// TODO 18/03/07
+            String txt = mReadtxtEt.getText().toString().trim();
+            if (TextUtils.isEmpty(txt)) {
+                if (Text2Speech.isSpeeching()) {
+                    Text2Speech.pause(this);
+                } else {
+                    Text2Speech.speech(this, "请输入内容", true);
+                }
+                return;
+            }
+            Text2Speech.speech(this, txt, true);
+            return;
+        }
+        if (i1 == R.id.bt_tts_read) {// TODO 18/02/24
 
-            System.out.println("首次编译运行时，HanLP会自动构建词典缓存，请稍候……");
-//            HanLP.Config.enableDebug();         // 为了避免你等得无聊，开启调试模式说点什么:-)
-//            System.out.println(HanLP.segment("你好，欢迎使用HanLP汉语处理包！接下来请从其他Demo中体验HanLP丰富的功能~"));
-            HanLP.segment("你好，欢迎使用HanLP汉语处理包！接下来请从其他Demo中体验HanLP丰富的功能~");
             String txt = mReadtxtEt.getText().toString().trim();
             if (TextUtils.isEmpty(txt)) {
                 Speak("请输入内容");
@@ -69,21 +198,18 @@ public class TtsDemoActivity extends AppCompatActivity implements View.OnClickLi
             }
             Speak(txt);
 
-            String text = "举办纪念活动铭记二战历史，不忘战争带给人类的深重灾难，是为了防止悲剧重演，确保和平永驻；" +
-                    "铭记二战历史，更是为了提醒国际社会，需要共同捍卫二战胜利成果和国际公平正义，" +
-                    "必须警惕和抵制在历史认知和维护战后国际秩序问题上的倒行逆施。";
-            System.out.println(BasicTokenizer.segment(text));
-            // 测试分词速度，让大家对HanLP的性能有一个直观的认识
-            long start = System.currentTimeMillis();
-            int pressure = 100000;
-            for (int i = 0; i < pressure; ++i)
-            {
-                BasicTokenizer.segment(text);
-            }
-            double costTime = (System.currentTimeMillis() - start) / (double) 1000;
-            System.out.printf("BasicTokenizer分词速度：%.2f字每秒\n", text.length() * pressure / costTime);
+        }
 
-        } else {
+        if (i1 == R.id.bt_read_b) {
+            if (TextUtils.isEmpty(path)) {
+                Speak("请先录音");
+            } else {
+                //获取mp3文件的路径
+
+                if (!mediaPlayer.isPlaying()) {
+                    mediaPlayer.start();
+                }
+            }
         }
     }
 
@@ -96,7 +222,11 @@ public class TtsDemoActivity extends AppCompatActivity implements View.OnClickLi
     @Override
     public void onInit(int status) {
         if (status == TextToSpeech.SUCCESS) {
-            tts.setLanguage(Locale.CHINA);
+            result = tts.setLanguage(Locale.CHINA);
+
+            if (result != TextToSpeech.LANG_COUNTRY_AVAILABLE && result != TextToSpeech.LANG_AVAILABLE) {
+                Toast.makeText(TtsDemoActivity.this, "暂不支持该语言", Toast.LENGTH_SHORT).show();
+            }
         }
     }
 
@@ -107,4 +237,56 @@ public class TtsDemoActivity extends AppCompatActivity implements View.OnClickLi
             tts.shutdown();
         }
     }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        if (Text2Speech.isSpeeching())
+            Text2Speech.pause(this);
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        if (Text2Speech.isSpeeching())
+            Text2Speech.shutUp(this);
+    }
+
+    private static String getAudioSavePath(String userId) {
+        String path = getAudioPathWithoutFile(userId);
+        File file = new File(path);
+        File parent = file.getParentFile();
+        if (parent != null && !parent.exists()) {
+            parent.mkdirs();
+        }
+        return path;
+    }
+
+    private static String getAudioPathWithoutFile(String userId) {
+        return getSavePath() + userId
+                + "_" + String.valueOf(System.currentTimeMillis())
+                + ".mp3";
+    }
+
+    private static String getSavePath() {
+        String path;
+        String floder = "audio";
+        if (checkSDCard()) {
+            path = Environment.getExternalStorageDirectory().toString()
+                    + File.separator + "MGJ-IM" + File.separator + floder
+                    + File.separator;
+
+        } else {
+            path = Environment.getDataDirectory().toString() + File.separator
+                    + "MGJ-IM" + File.separator + floder + File.separator;
+        }
+        return path;
+    }
+
+    private static boolean checkSDCard() {
+        return Environment.getExternalStorageState().equals(
+                Environment.MEDIA_MOUNTED);
+    }
+
+
 }

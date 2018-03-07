@@ -60,7 +60,11 @@ https://www.jianshu.com/p/9fe377dd9750
  https://sv.baidu.com/sv?source=share-h5&pd=minishare&vid=8163008920202359258
 
 ## 自然语言 HandLP
-https://github.com/hankcs/HanLP
- 
+https://github.com/hankcs/HanLP (包太多，移动端不适合)
+语音识别
+http://yuyin.baidu.com/wake#m4（免费版）
+音频编解码speex库
+http://blog.csdn.net/jianiuqi/article/details/53142037
+ 现在客户端已经实现了一个一边录制和speex编码，一边speex解码和播放的的demo。
  
  [▲ 回到顶部](#top)

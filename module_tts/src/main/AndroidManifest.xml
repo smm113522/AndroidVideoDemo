@@ -1,9 +1,15 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-
     package="com.kesun.tts">
+
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 
     <application android:theme="@style/AppTheme">
         <activity android:name=".TtsDemoActivity"></activity>
+
+        <service android:name="com.wulee.text2speachlib.Text2SpeechService" />
+
     </application>
 
 </manifest>
