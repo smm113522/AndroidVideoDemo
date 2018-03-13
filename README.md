@@ -40,6 +40,8 @@ http://blog.csdn.net/ywl5320/article/details/75040724
 
 https://github.com/wanliyang1990/wlplayer
 
+http://p.codekk.com/detail/Android/chenzhihui28/VideoRecorderAndCompressor
+
 ## ijkplayer
 
 https://www.jianshu.com/p/9fe377dd9750
