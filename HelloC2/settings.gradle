@@ -1,0 +1,2 @@
+rootProject.name='HelloC'
+include ':app', ':library'
